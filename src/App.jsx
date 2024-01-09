@@ -15,7 +15,7 @@ function App() {
       <Navbar visible={visible}/>
       <Home setVisible={setVisible}/>
       <About/>
-      <Projects/>
+      {/* <Projects/> */}
       {/* <AnimeTest/> */}
       <LastPage/>
     </>

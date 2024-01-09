@@ -1,23 +1,26 @@
 import React from 'react'
 
 function About() {
+
+  
+
   return (
-    <div className="about text-white h-screen flex flex-col items-center">
+    <div className="about text-white lg:h-screen flex flex-col items-center">
       <span className="title font-bold">About Me</span>
-      <div className="container w-full h-full mt-12 flex gap-6 justify-center flex-wrap">
-        <div className="w-[30%] flex flex-col justify-center gap-6">
-          <div className="h-[75%] w-[100%] bg-gradient-to-b from-higherCardColor to-lowerCardColor rounded-full">photo</div>
-          <div className="h-[20%] w-full bg-gradient-to-b from-higherCardColor to-lowerCardColor rounded-[2rem]">Coding profiles</div>
+      <div className="container mt-6 h-full w-full flex flex-col justify-center items-center gap-4 lg:gap-0 lg:flex-row">
+        <div className="w-full h-[20rem] flex flex-col items-center justify-center lg:w-[34%] lg:h-full xl:w-[30%] 2xl:w-[25%]">
+          <div className="w-[20rem] h-[20rem] bg-red-400 rounded-full"></div>
+          {/* <div className="w-[20rem] h-[7rem] bg-red-400 rounded-3xl hidden lg:flex"></div> */}
         </div>
-        <div className="w-[54%] flex flex-col justify-center items-center gap-6 flex-wrap ">
-          <div className="w-full h-[75%] flex gap-6 flex-wrap">
-            <div className="h-full w-[68%] bg-gradient-to-b from-higherCardColor to-lowerCardColor rounded-[2rem]">Vilas Balu Rabad</div>
-            <div className="h-full w-[28%] flex flex-col gap-6">
-              <div className="h-[40%] w-full rounded-[2rem] bg-gradient-to-b from-higherCardColor to-lowerCardColor">Connectr With</div>
-              <div className="h-[60%] w-full rounded-[2rem] bg-gradient-to-b from-higherCardColor to-lowerCardColor">Skills</div>
+        <div className="w-full h-auto flex flex-col items-center gap-4 lg:h-[90%] lg:w-[65%]">
+          <div className="w-[90%] h-auto flex flex-col gap-4 lg:h-[70%] lg:w-full lg:flex-row">
+            <div className="w-[100%] h-[20rem] bg-slate-400 rounded-3xl lg:h-full lg:w-[65%]"></div>
+            <div className="w-[100%] h-[10rem] flex gap-2 lg:w-full lg:flex-col lg:h-full lg:w-[33%]">
+              <div className="w-1/2 h-full bg-slate-500 rounded-3xl lg:h-[45%] lg:w-full"></div>
+              <div className="w-1/2 h-full bg-slate-500 rounded-3xl lg:h-[55%] lg:w-full"></div>
             </div>
           </div>
-          <div className="h-[20%] w-full bg-gradient-to-b from-higherCardColor to-lowerCardColor rounded-[2rem]">Tect Stacks</div>
+          <div className="w-[90%] h-[7rem] bg-slate-800 rounded-3xl lg:w-full"></div>
         </div>
       </div>
     </div>
