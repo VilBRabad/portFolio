@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+   html{
+      height: auto;
+      width: auto;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+   }
+   .Nav ul li{
+      @apply mx-6 px-4;
+   }
+   .navbar{
+      transition: width 1s;
+   }
+   .title{
+      @apply text-3xl mt-16 font-semibold;
+   }
+   .about{
+      /* @apply animate-pulse; */
+   }
+
+   .projCard{
+      @apply flex flex-col items-center justify-center gap-2 h-[25rem] w-[40rem] rounded-[2rem];
+   }
+   .photo{
+      @apply h-[70%] w-[90%] bg-slate-300 rounded-xl
+   }
+   .con{
+      @apply h-[20%] w-[90%] flex justify-between items-center;
+   }
+   .name,
+   .stack{
+      @apply h-[2rem] w-[10rem] bg-slate-300 mt-2 rounded-full;
+   }
+   .name{
+      @apply h-[2.4rem] w-[20rem];
+   }
+   .stack{
+      @apply h-[1.6rem];
+   }
+   .gitIcon{
+      @apply h-[3rem] w-[3rem] bg-slate-300 rounded-full;
+   }
+}

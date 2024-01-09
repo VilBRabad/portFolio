@@ -1,0 +1,63 @@
+#root{
+   background: linear-gradient(45deg, #05020D, #000000);
+   /* background: linear-gradient(45deg, #ffffff, #ffffff); */
+   font-family: 'Open Sans', sans-serif;
+}
+
+.colors{
+   animation: anime infinite ease-in-out;
+   animation-duration: 10s;
+   animation-delay: 1s;
+   animation-direction: alternate;
+}
+.colors2{
+   animation: anime2 infinite ease-in-out;
+   animation-duration: 7s;
+   animation-delay: 0s;
+   animation-direction: alternate;
+}
+
+@keyframes anime {
+   0%{
+      transform: translate(0rem, 0rem);
+   }
+   50%{
+      transform: translate(8rem, -5rem);
+   }
+   100%{
+      transform: translate(-5rem, 0rem);
+   }
+}
+@keyframes anime2 {
+   0%{
+      transform: translate(0rem, 0rem);
+   }
+   50%{
+      transform: translate(-7rem, 5rem);
+   }
+   100%{
+      transform: translate(5rem, 0rem);
+   }
+}
+
+::-webkit-scrollbar {
+   width: .3rem;
+   background: linear-gradient(45deg, #05020D, #000000);
+ }
+ 
+ /* Track */
+ ::-webkit-scrollbar:hover {
+   width: 0.5rem;
+ }
+  
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+   background: linear-gradient(-45deg, rgb(45, 0, 209), black); 
+   border-radius: 10px;
+   transition: 0.3s all ease-in-out;
+ }
+ 
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+   background: #7b0033; 
+ }
