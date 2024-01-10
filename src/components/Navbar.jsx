@@ -4,7 +4,7 @@ import { IoMdMenu } from "react-icons/io";
 
 function Navbar({visible}) {
   return (
-    <div className="Nav sticky top-0 h-[3.5rem] text-white w-[100%] flex items-center justify-center z-10">
+    <div className="Nav sticky top-0 h-[3.5rem] text-white w-[100%] flex items-center justify-center z-20">
       <div className={`2xl:container navbar flex items-center p-2 px-4 rounded-[10rem] ${visible?'w-[100%] justify-between':'justify-center md:max-lg:w-[50%] lg:max-xl:w-[38%] 2xl:w-[30%] pr-[0%] bg-bgColor backdrop-blur-sm 2xl:justify-center'} hidden md:flex`}>
         <div className={`myName ml-4 text-xl font-bold transition-delay-4 ${visible?"block":"hidden"}`}>VILAS.</div>
         <div className={`flex justify-around text-md items-center`}>

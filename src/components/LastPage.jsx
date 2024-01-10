@@ -3,12 +3,12 @@ import React from 'react'
 function LastPage() {
   return (
     <div className="h-[100vh] w-screen relative text-white flex justify-center items-center">
-      <div className="container flex flex-col h-full w-full justify-center items-center relative ">
+      <div className="container flex flex-col h-full w-full justify-center items-center relative max-md:w-[90%]">
          <span className="text-xl font-bold">VILAS.</span>
-         <span className="text-[3rem] text-center font-bold lg:text-[4rem]">Thank You for Visiting</span>
-         <div className="flex gap-4">
-            <div className="w-[8rem] h-12 cursor-pointer bg-gradient-to-r from-slate-700 to-teal-400 m-4 rounded-md border-2 border-slate-500 flex justify-center items-center text-black text-lg font-semibold transition-all duration-300 ease-in-out hover:text-white hover:bg-none z-10">Hire Me</div>
-            <div className="w-[8rem] h-12 cursor-pointer m-4 rounded-md border-2 border-slate-500 flex justify-center items-center text-lg font-semibold transition-all duration-300 ease-in-out hover:bg-teal-600 hover:text-black z-10">My Work</div>
+         <span className="text-[3rem] text-center font-bold lg:text-[4rem] max-sm:text-[2rem]">Thank You for Visiting</span>
+         <div className="flex gap-4 max-sm:flex-wrap max-sm:justify-center max-sm:gap-2">
+            <div className="w-[8rem] h-12 cursor-pointer bg-gradient-to-r from-slate-700 to-teal-400 m-4 rounded-md border-2 border-slate-500 flex justify-center items-center text-black text-lg font-semibold transition-all duration-300 ease-in-out hover:text-white hover:bg-none z-10 max-sm:m-0 max-sm:mt-4">Hire Me</div>
+            <div className="w-[8rem] h-12 cursor-pointer m-4 rounded-md border-2 border-slate-500 flex justify-center items-center text-lg font-semibold transition-all duration-300 ease-in-out hover:bg-teal-600 hover:text-black z-10 max-sm:m-0 max-sm:mt-4">My Work</div>
          </div>
         <div className="Top absolute w-12 h-12 bg-slate-300 bottom-4 right-4 rounded-full"></div>
       </div>

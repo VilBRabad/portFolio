@@ -26,7 +26,7 @@
    }
 
    .projCard{
-      @apply flex flex-col items-center justify-center gap-2 h-[25rem] w-[40rem] rounded-[2rem];
+      @apply flex flex-col items-center justify-center gap-2 h-[25rem] w-[90%] rounded-[2rem] md:w-[60%] lg:w-1/2;
    }
    .photo{
       @apply h-[70%] w-[90%] bg-slate-300 rounded-xl
@@ -34,15 +34,18 @@
    .con{
       @apply h-[20%] w-[90%] flex justify-between items-center;
    }
+   .det{
+      @apply h-full w-full
+   }
    .name,
    .stack{
-      @apply h-[2rem] w-[10rem] bg-slate-300 mt-2 rounded-full;
+      @apply h-[2rem] w-[90%] bg-slate-300 mt-2 rounded-full;
    }
-   .name{
+   /* .name{
       @apply h-[2.4rem] w-[20rem];
-   }
+   }*/
    .stack{
-      @apply h-[1.6rem];
+      @apply h-[1.6rem] w-[60%];
    }
    .gitIcon{
       @apply h-[3rem] w-[3rem] bg-slate-300 rounded-full;
