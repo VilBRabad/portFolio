@@ -46,9 +46,9 @@
  }
  
  /* Track */
- ::-webkit-scrollbar:hover {
+ /* ::-webkit-scrollbar:hover {
    width: 0.5rem;
- }
+ } */
   
  /* Handle */
  ::-webkit-scrollbar-thumb {

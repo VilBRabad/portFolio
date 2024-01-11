@@ -1,19 +1,18 @@
 import React, { useEffect } from 'react'
-import { motion, useTransform } from 'framer-motion'
 import {useInView} from 'react-intersection-observer';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 
-function Projects() {
+function Projects({projectsRef}) {
   useEffect(()=>{
     Aos.init();
   },[])
   // const {ref: firRef, inView: firstCard} = useInView();
-  const {ref: secRef, inView: secondCard} = useInView();
-  const {ref: thiRef, inView: thirdCard} = useInView();
+  // const {ref: secRef, inView: secondCard} = useInView();
+  // const {ref: thiRef, inView: thirdCard} = useInView();
 
   return (
-    <div className={`relative text-white min-h-screen flex flex-col items-center`}>
+    <div ref={projectsRef} id="projects" className={`relative text-white min-h-screen flex flex-col items-center overflow-hidden`}>
       <span className="title font-bold">Projects</span>
       <div className={`relative mt-20 min-h-full w-full container z-5 flex flex-col`}>
         <div className={`relative mt-10 h-[80%] w-full mt-10 flex flex-col-reverse justify-center gap-2 items-center lg:items-start lg:flex-row lg:gap-10 xl:gap-20`}>
