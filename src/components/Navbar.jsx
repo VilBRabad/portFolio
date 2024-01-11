@@ -6,7 +6,7 @@ import { RxCross2 } from "react-icons/rx";
 
 function Navbar({visible, views}) {
   const [show, setShow] = useState(false);
-  console.log(views);
+  // console.log(views);
   return (
     <>
     <div className="Nav relative md:sticky top-0 h-[3.5rem] text-white w-[100%] flex items-center justify-center z-20">

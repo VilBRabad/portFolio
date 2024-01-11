@@ -6,8 +6,15 @@ import Navbar from './components/Navbar'
 import Projects from './components/Projects'
 import LastPage from './components/LastPage'
 import {useInView} from 'react-intersection-observer';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+
 
 function App() {
+
+  useEffect(()=>{
+    Aos.init();
+  },[])
 
   const [visible, setVisible] = useState(true);
   const {ref: homeRef, inView: homePage} = useInView();

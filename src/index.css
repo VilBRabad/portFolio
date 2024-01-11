@@ -26,10 +26,10 @@
    }
 
    .projCard{
-      @apply flex flex-col items-center justify-center gap-2 h-[25rem] w-[90%] rounded-[2rem] md:w-[60%] lg:w-1/2;
+      @apply flex flex-col items-center justify-center gap-2 h-[25rem] w-[90%] rounded-[2rem]  backdrop-blur-md md:w-[60%] lg:w-1/2;
    }
    .photo{
-      @apply h-[70%] w-[90%] bg-slate-300 rounded-xl
+      @apply h-[70%] w-[90%] rounded-xl flex items-center justify-center;
    }
    .con{
       @apply h-[20%] w-[90%] flex justify-between items-center;
@@ -39,15 +39,15 @@
    }
    .name,
    .stack{
-      @apply h-[2rem] w-[90%] bg-slate-300 mt-2 rounded-full;
+      @apply h-[2rem] w-[90%]  ml-4 mt-2 rounded-full;
    }
-   /* .name{
-      @apply h-[2.4rem] w-[20rem];
-   }*/
+   .name{
+      @apply text-xl md:text-2xl font-semibold;
+   }
    .stack{
-      @apply h-[1.6rem] w-[60%];
+      @apply h-[1.6rem] w-[60%] text-sm opacity-70;
    }
    .gitIcon{
-      @apply h-[3rem] w-[3rem] bg-slate-300 rounded-full;
+      @apply h-[3rem] w-[3rem] mt-4 flex items-center justify-center text-4xl rounded-full;
    }
 }
