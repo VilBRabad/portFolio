@@ -4,8 +4,11 @@ import pr1 from "../Images/p1.png";
 import pr2 from "../Images/pr2.png";
 import pr3 from "../Images/pr3.png";
 import { FaGithub } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 function Projects({projectsRef}) {
+
+  const navigate = useNavigate();
 
   const [height, setHeight] = useState(0);
   useEffect(() => {
@@ -28,20 +31,20 @@ function Projects({projectsRef}) {
           <div className="absolute w-full flex justify-center -top-5 lg:top-5">
             <div data-aos="fade" data-aos-duration="1000" className="h-[1.5rem] w-[1.5rem] border-4 border-purple-800 bg-black rounded-full  z-[11]"></div>
           </div>
-          <div data-aos="fade-right" data-aos-duration="1000" className="projCard bg-gradient-to-b from-higherCardColor to-midCardColor z-10 xl:w-[33rem]">
+          <div onClick={()=> navigate("/details")} data-aos="fade-right" data-aos-duration="1000" className="projCard cursor-pointer bg-gradient-to-b from-higherCardColor to-midCardColor z-10 xl:w-[33rem]">
             <div className="photo">
               <img src={pr1} className="w-[27rem]" alt="" />
             </div>
             <div className="con">
               <div className="det">
-                <div className="name">My PortFolio</div>
+                <div className="name cursor-pointer">My PortFolio</div>
                 <div className="stack">React.Js | Tailwind | Figma</div>
               </div>
               <div className="gitIcon"><FaGithub/></div>
             </div>
           </div>
           <div data-aos="fade-left" className="h-[3rem] w-full flex lg:h-full lg:mt-3 items-center justify-center z-10 lg:w-1/2 lg:justify-start xl:w-[33rem]">
-            <div className="h-10 flex items-center text-2xl max-lg:bg-higherCardColor rounded-lg px-2 backdrop-blur-sm">20 January 2024</div>
+            <div className="h-10 flex items-center text-lg lg:text-2xl max-lg:bg-higherCardColor rounded-lg px-2 backdrop-blur-sm">20 January 2024</div>
           </div>
         </div>
 
@@ -49,7 +52,7 @@ function Projects({projectsRef}) {
           <div className="absolute w-full flex justify-center -top-5 lg:top-5">
             <div data-aos="fade" data-aos-duration="1000" className="h-[1.5rem] w-[1.5rem] border-4 border-purple-800 bg-black rounded-full  z-[11]"></div>
           </div>
-          <div data-aos="fade-left" data-aos-duration="1000" className="projCard bg-gradient-to-b from-higherCardColor to-midCardColor z-10 xl:w-[33rem]">
+          <div onClick={()=> navigate("/details")} data-aos="fade-left" data-aos-duration="1000" className="projCard cursor-pointer bg-gradient-to-b from-higherCardColor to-midCardColor z-10 xl:w-[33rem]">
             <div className="photo">
               <img className="w-[27rem]" src={pr2} alt="" />
             </div>
@@ -62,7 +65,7 @@ function Projects({projectsRef}) {
             </div>
           </div>
           <div data-aos="fade-right" className="h-[3rem] w-full flex items-center justify-center lg:mt-3 z-10 lg:w-1/2 lg:justify-end xl:w-[33rem]">
-            <div className="h-10 flex items-center text-2xl max-lg:bg-higherCardColor rounded-lg px-2 backdrop-blur-sm">03 March 2023</div>
+            <div className="h-10 flex items-center text-lg lg:text-2xl max-lg:bg-higherCardColor rounded-lg px-2 backdrop-blur-sm">03 March 2023</div>
           </div>
         </div>
 
@@ -70,7 +73,7 @@ function Projects({projectsRef}) {
           <div className="absolute w-full flex justify-center -top-5 lg:top-5">
             <div data-aos="fade" data-aos-duration="1000" className="h-[1.5rem] w-[1.5rem] border-4 border-purple-800 bg-black rounded-full  z-[11]"></div>
           </div>
-          <div data-aos="fade-right" data-aos-duration="1000" className="projCard bg-gradient-to-b from-higherCardColor to-midCardColor z-10 xl:w-[33rem]">
+          <div onClick={()=> navigate("/details")} data-aos="fade-right" data-aos-duration="1000" className="projCard cursor-pointer bg-gradient-to-b from-higherCardColor to-midCardColor z-10 xl:w-[33rem]">
             <div className="photo">
               <img className="w-[27rem]" src={pr3} alt="" />
             </div>
@@ -83,7 +86,7 @@ function Projects({projectsRef}) {
             </div>
           </div>
           <div data-aos="fade-left" className="h-[3rem] w-full flex items-center justify-center z-10 lg:mt-3 lg:w-1/2 lg:justify-start xl:w-[33rem]">
-            <div className="h-10 flex items-center text-2xl max-lg:bg-higherCardColor rounded-lg px-2 backdrop-blur-sm">14 November 2022</div>
+            <div className="h-10 flex items-center text-lg lg:text-2xl max-lg:bg-higherCardColor rounded-lg px-2 backdrop-blur-sm">14 November 2022</div>
           </div>
         </div>
       </div>
