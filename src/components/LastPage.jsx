@@ -20,7 +20,7 @@ function LastPage() {
             <div onClick={handleClick} className="w-[12rem] h-12 cursor-pointer bg-[#9A00E3] m-4 rounded-md border-2 border-slate-500 flex justify-center items-center text-black text-lg font-semibold transition-all duration-300 ease-in-out hover:text-white hover:bg-transparent z-10 max-sm:m-0 max-sm:mt-4">Lets Work Together</div>
             <a href="#projects" className="w-[8rem] h-12 z-10"><div className="w-full h-full cursor-pointer mt-4 rounded-md border-2 border-slate-500 flex justify-center items-center text-lg font-semibold transition-all duration-300 ease-in-out hover:bg-[#9A00E3] hover:text-black max-sm:m-0 max-sm:mt-4">My Work</div></a>
          </div>
-         <div className="contact z-10 text-md italic opacity-60 flex items-center gap-1">
+         <div className="contact z-10 mt-6 lg:mt-0 text-md italic opacity-60 flex items-center gap-1">
           <CgMail className="text-2xl"/><span>rabadvilas11@gmail.com</span>
          </div>
         <div className="Top absolute w-12 h-12 flex items-center justify-center text-3xl border-2 bottom-4 lg:right-4 rounded-full">
