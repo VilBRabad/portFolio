@@ -73,7 +73,7 @@ function ProjDetails({ setVisNavs }) {
       <div className="min-h-screen w-screen dark:text-white flex justify-center">
          <div className="relative my-8 h-full w-[100%] lg:w-[60rem] flex flex-col items-center gap-8">
             <div className="flex flex-col items-center sm:flex-row h-[30rem] sm:h-[20rem] w-[90%] justify-center gap-2 sm:gap-4">
-               <div className="h-[28rem] w-[20rem] flex items-center justify-center sm:h-full sm:w-[45rem] bg-slate-950/10 dark:bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl p-6"><img src={ data[para].image } id="img" alt="" /></div>
+               <div className="h-[28rem] w-[20rem] flex items-center justify-center sm:h-full sm:w-[45rem] bg-slate-950/10 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl p-6"><img src={ data[para].image } id="img" alt="" /></div>
                <div className="h-full w-[20rem] sm:w-full flex flex-col gap-2 sm:gap-4">
                   <div className="w-full h-[30%] flex items-center justify-between pl-4 text-xl font-semibold bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl">{ data[para].name }
                      <Link to={ data[para].link } target="_blank"><FaGithub className="text-3xl mr-6" /></Link>

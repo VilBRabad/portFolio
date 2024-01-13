@@ -17,6 +17,10 @@
    animation-direction: alternate;
 }
 
+.app{
+   transition: all 0.3s all ease-in-out;
+}
+
 @keyframes anime {
    0%{
       transform: translate(0rem, 0rem);

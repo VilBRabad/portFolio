@@ -20,7 +20,7 @@ function About({aboutRef}) {
       <div className="container pt-8 mt-6 min-h-full w-full flex flex-col justify-center items-center gap-4 lg:gap-0 lg:flex-row">
         <div className="w-full h-[15rem] flex flex-col items-center justify-center md:h-[20rem] lg:w-[34%] lg:h-full xl:w-[30%] 2xl:w-[25%]">
           <div data-aos="fade-in" da  ta-aos-duration="1000"  className="w-[15rem] h-[15rem] flex items-center justify-center backdrop-blur-sm bg-gradient-to-b from-slate-300 to-slate-300/10 dark:bg-gradient-to-b dark:from-higherCardColor dark:to-lowerCardColor rounded-full md:w-[20rem] md:h-[20rem] overflow-hidden">
-            <img src={photo} className="w-[90%] mt-8 brightness-[0.8] contrast-[1.07]" alt="" />
+            <img src={photo} className="w-[90%] mt-8 drop-shadow-lg dark:brightness-[0.8] contrast-[1.07]" alt="" />
           </div>
           {/* <div className="w-[20rem] h-[7rem] bg-red-400 rounded-3xl hidden lg:flex"></div> */}
         </div>

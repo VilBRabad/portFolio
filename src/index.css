@@ -25,6 +25,9 @@
       /* @apply animate-pulse; */
    }
 
+   .proj{
+      @apply relative h-[80%] w-full mt-10 flex flex-col-reverse justify-center gap-2 items-center lg:items-start lg:gap-10 xl:gap-20
+   }
    .projCard{
       @apply flex flex-col items-center justify-center gap-2 h-[25rem] w-[90%] rounded-[1rem]  backdrop-blur-md md:w-[60%] lg:w-1/2 bg-gradient-to-b from-slate-300 to-slate-300/70 dark:bg-gradient-to-b dark:from-higherCardColor dark:to-midCardColor z-10 xl:w-[33rem];
    }
@@ -32,7 +35,16 @@
       @apply absolute w-full flex justify-center -top-5 lg:top-5;
    }
    .projDot{
-      @apply h-[1.5rem] w-[1.5rem] border-4 border-purple-800 bg-black rounded-full z-[11];
+      @apply h-[1.5rem] w-[1.5rem] border-4 border-purple-800 bg-white dark:bg-black rounded-full z-[11];
+   }
+   .projInfo{
+      @apply relative h-[3rem] w-full flex flex-col lg:h-full lg:mt-3 items-center justify-center z-10 lg:w-1/2 xl:w-[33rem]
+   }
+   .projDate{
+      @apply h-10 flex items-center text-lg lg:text-2xl max-lg:bg-slate-300/80 max-lg:dark:bg-higherCardColor rounded-lg px-2 backdrop-blur-sm
+   }
+   .shortDetail{
+      @apply mt-4 text-justify hidden lg:flex;
    }
    .photo{
       @apply h-[70%] w-[90%] rounded-xl flex items-center justify-center;
@@ -55,5 +67,10 @@
    }
    .gitIcon{
       @apply h-[3rem] w-[3rem] mt-4 flex items-center justify-center text-4xl rounded-full;
+   }
+
+
+   .modes{
+      @apply cursor-pointer text-2xl dark:text-white text-black lg:mr-2 mr-10;
    }
 }
