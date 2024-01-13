@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function ErrorPage() {
   return (
-    <div className="h-screen w-screen darl:text-white relative flex flex-col items-center justify-center z-10 overflow-hidden">
+    <div className="h-screen w-screen dark:text-white relative flex flex-col items-center justify-center z-10 overflow-hidden">
       <span className="text-[30rem] font-bold opacity-10 z-10">404</span>
       <span className="absolute font-bold text-4xl z-10">Page Not Found</span>
       <Link to="/" className="absolute top-[55%] z-10"><button className="text-lg h-10 w-20 rounded-md transition bg-purple-800 hover:bg-purple-700 border-md">Home</button></Link>
