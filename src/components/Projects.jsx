@@ -54,9 +54,9 @@ function Projects({ projectRef }) {
               <div className="gitIcon"><Link to="https://github.com/VilBRabad/portFolio" target="_blank"><FaGithub /></Link></div>
             </div>
           </div>
-          <div data-aos="fade-left" className="projInfo lg:items-start">
-            <div className="projDate">20 January 2024</div>
-            <div className="shortDetail ml-4">Welcome to my professional portfolio, a dedicated space designed to showcase my skills, experiences, and creative journey. This platform is a reflection of my passion for Web Development and Designing, highlighting not only what I've accomplished but also the potential I bring to future endeavors.</div>
+          <div className="projInfo lg:items-start">
+            <div data-aos="fade-left" className="projDate">20 January 2024</div>
+            <div data-aos="fade-left" data-aos-duration="1000" className="shortDetail ml-4">Welcome to my professional portfolio, a dedicated space designed to showcase my skills, experiences, and creative journey. This platform is a reflection of my passion for Web Development and Designing, highlighting not only what I've accomplished but also the potential I bring to future endeavors.</div>
           </div>
         </div>
 
@@ -76,9 +76,9 @@ function Projects({ projectRef }) {
               <div className="gitIcon"><Link to="https://github.com/VilBRabad/blood-bank-system" target="_blank"><FaGithub /></Link></div>
             </div>
           </div>
-          <div data-aos="fade-right" className="projInfo lg:items-end">
-            <div className="projDate">01 December 2024</div>
-            <div className="shortDetail mr-4">The project revolves around the vital domain of blood donation and management within a ReactJs and Flask framework. It facilitates the seamless interaction between hospitals, donors and normal users by providing a robust online platform. Hospitals and donors alike can register on the site, creating dedicated accounts to streamline the blood donation process....</div>
+          <div className="projInfo lg:items-end">
+            <div data-aos="fade-right" className="projDate">01 December 2024</div>
+            <div data-aos="fade-right" data-aos-duration="1000" className="shortDetail mr-4">The project revolves around the vital domain of blood donation and management within a ReactJs and Flask framework. It facilitates the seamless interaction between hospitals, donors and normal users by providing a robust online platform. Hospitals and donors alike can register on the site, creating dedicated accounts to streamline the blood donation process....</div>
           </div>
         </div>
 
@@ -98,9 +98,9 @@ function Projects({ projectRef }) {
               <div className="gitIcon"><Link to="https://github.com/VilBRabad/Big-Mart-Sales-Visualization" target="_blank"><FaGithub /></Link></div>
             </div>
           </div>
-          <div data-aos="fade-left" className="projInfo lg:items-start">
-            <div className="projDate">29 May 2023</div>
-            <div className="shortDetail ml-4">Welcome to my professional portfolio, a dedicated space designed to showcase my skills, experiences, and creative journey. This platform is a reflection of my passion for Web Development and Designing, highlighting not only what I've accomplished but also the potential I bring to future endeavors.</div>
+          <div className="projInfo lg:items-start">
+            <div data-aos="fade-left" className="projDate">29 May 2023</div>
+            <div data-aos="fade-left" data-aos-duration="1000" className="shortDetail ml-4">Welcome to my professional portfolio, a dedicated space designed to showcase my skills, experiences, and creative journey. This platform is a reflection of my passion for Web Development and Designing, highlighting not only what I've accomplished but also the potential I bring to future endeavors.</div>
           </div>
         </div>
       </div>

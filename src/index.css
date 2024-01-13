@@ -73,4 +73,10 @@
    .modes{
       @apply cursor-pointer text-2xl dark:text-white text-black lg:mr-2 mr-10;
    }
+
+
+   .feedform input, 
+   .feedform textarea{
+      @apply w-[80%] md:w-[24rem] rounded-md p-3 outline-0 text-lg text-black dark:text-white bg-slate-700/20 dark:bg-slate-100/20; 
+   }
 }

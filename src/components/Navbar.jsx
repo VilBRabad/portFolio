@@ -15,9 +15,7 @@ function Navbar({ visible, visNavs, setVisNavs, refs }) {
   // console.log(localStorage.theme);
   // console.log(window.matchMedia);
 
-  const [lightMode, setLightMode] = useState(
-    localStorage.theme === 'dark' ? false : true
-  );
+  const [lightMode, setLightMode] = useState(false);
 
   useEffect(() => {
     if (lightMode) {
@@ -35,7 +33,7 @@ function Navbar({ visible, visNavs, setVisNavs, refs }) {
     <>
       <div className="Nav relative md:sticky top-0 h-[3.5rem] dark:text-white w-[100%] flex items-center justify-center z-20">
         <div className={ `2xl:container navbar flex items-center p-2 px-4 rounded-[10rem] ${(visible && !visNavs) ? 'w-[100%] justify-between' : 'justify-center md:max-lg:w-[50%] lg:max-xl:w-[38%] 2xl:w-[30%] pr-[0%] bg-slate-200/50 dark:bg-bgColor drop-shadow backdrop-blur-sm 2xl:justify-center'} md:flex` }>
-          <div className={ `myName ml-4 text-xl font-extrabold transition-delay-4 ${(visible && !visNavs) ? "block" : "hidden"}` }>VILAS.</div>
+          <div className={ `myName ml-4 bg-gradient-to-br from-[#CB79F5] via-[#007CE1] to-[#001AFF] text-transparent bg-clip-text text-xl font-extrabold transition-delay-4 ${(visible && !visNavs) ? "block" : "hidden"}` }>VILAS.</div>
           <div className="flex">
             <div className={ `flex justify-around text-md items-center hidden md:block` }>
               <ul className="flex justify-between text-md items-center mr-[5%]">

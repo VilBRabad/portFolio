@@ -24,7 +24,7 @@ function App() {
 
 
   return (
-    <div className="bg-white dark:bg-gradient-to-b to-[#05020D] from-slate-950">
+    <div className="bg-white dark:bg-gradient-to-br to-[#030923] from-slate-950">
       <BrowserRouter>
         <Navbar visible={ visible } visNavs={ visNavs } setVisNavs={ setVisNavs } refs={ { homeVis, aboutVis, projectVis } } />
         <Routes>
