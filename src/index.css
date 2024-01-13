@@ -26,7 +26,13 @@
    }
 
    .projCard{
-      @apply flex flex-col items-center justify-center gap-2 h-[25rem] w-[90%] rounded-[1rem]  backdrop-blur-md md:w-[60%] lg:w-1/2;
+      @apply flex flex-col items-center justify-center gap-2 h-[25rem] w-[90%] rounded-[1rem]  backdrop-blur-md md:w-[60%] lg:w-1/2 bg-gradient-to-b from-slate-300 to-slate-300/70 dark:bg-gradient-to-b dark:from-higherCardColor dark:to-midCardColor z-10 xl:w-[33rem];
+   }
+   .dotClass{
+      @apply absolute w-full flex justify-center -top-5 lg:top-5;
+   }
+   .projDot{
+      @apply h-[1.5rem] w-[1.5rem] border-4 border-purple-800 bg-black rounded-full z-[11];
    }
    .photo{
       @apply h-[70%] w-[90%] rounded-xl flex items-center justify-center;
