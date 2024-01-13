@@ -4,15 +4,11 @@ import { IoMdMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { Link, redirect } from 'react-router-dom';
 
-function Navbar({visible, views, visNavs, setVisNavs}) {
+// function Navbar({visible, views, visNavs, setVisNavs}) {
+function Navbar({visible, visNavs, setVisNavs, refs}) {
   const [show, setShow] = useState(false);
 
-  useEffect(()=>{
-    console.log(visNavs);
-  }, [visNavs])
-
   const handleClick = ()=>{
-    console.log("vi");
     setVisNavs(!visNavs);
   }
   return (
@@ -23,15 +19,19 @@ function Navbar({visible, views, visNavs, setVisNavs}) {
         <div className={`flex justify-around text-md items-center`}>
           <ul className="flex justify-between text-md items-center mr-[5%]">
             {visNavs?
-              <li onClick={handleClick} className={`hover:bg-slate-600/25 rounded-[10rem] cursor-pointer ${views.homePage?"bg-slate-600/25":"bg-transparent"}`}><Link to="/">Home</Link></li>
+              <li onClick={handleClick} className={`hover:bg-slate-600/25 rounded-[10rem] cursor-pointer ${refs.homeVis?"bg-slate-600/25":"bg-transparent"}`}><Link to="/">Home</Link></li>
+              // <li onClick={handleClick} className={`hover:bg-slate-600/25 rounded-[10rem] cursor-pointer ${views.homePage?"bg-slate-600/25":"bg-transparent"}`}><Link to="/">Home</Link></li>
               :
-              <li className={`hover:bg-slate-600/25 rounded-[10rem] cursor-pointer ${views.homePage?"bg-slate-600/25":"bg-transparent"}`}><a href="#home">Home</a></li>
+              // <li className={`hover:bg-slate-600/25 rounded-[10rem] cursor-pointer ${views.homePage?"bg-slate-600/25":"bg-transparent"}`}><a href="#home">Home</a></li>
+              <li className={`hover:bg-slate-600/25 rounded-[10rem] cursor-pointer ${refs.homeVis?"bg-slate-600/25":"bg-transparent"}`}><a href="#home">Home</a></li>
               // <li>skdsd</li>
             }
             {!visNavs?
               <>
-                <li className={`cursor-pointer rounded-[10rem] hover:bg-slate-600/25 ${views.aboutPage?"bg-slate-600/25":"bg-transparent"}`}><a href="#about">About</a></li>
-                <li className={`cursor-pointer rounded-[10rem] hover:bg-slate-600/25 ${views.projectsPage?"bg-slate-600/25":"bg-transparent"}`}><a href="#projects">Projects</a></li>
+                {/* <li className={`cursor-pointer rounded-[10rem] hover:bg-slate-600/25 ${views.aboutPage?"bg-slate-600/25":"bg-transparent"}`}><a href="#about">About</a></li> */}
+                <li className={`cursor-pointer rounded-[10rem] hover:bg-slate-600/25 ${refs.aboutVis?"bg-slate-600/25":"bg-transparent"}`}><a href="#about">About</a></li>
+                {/* <li className={`cursor-pointer rounded-[10rem] hover:bg-slate-600/25 ${views.projectsPage?"bg-slate-600/25":"bg-transparent"}`}><a href="#projects">Projects</a></li> */}
+                <li className={`cursor-pointer rounded-[10rem] hover:bg-slate-600/25 ${refs.projectVis?"bg-slate-600/25":"bg-transparent"}`}><a href="#projects">Projects</a></li>
               </>:
               ""
             }
@@ -44,9 +44,19 @@ function Navbar({visible, views, visNavs, setVisNavs}) {
       <div className={`fixed top-0 text-white bg-slate-950 min-h-screen w-screen z-20 transition duration-500 ${show?"translate-x-0":"translate-x-full"}`}>
         <RxCross2 className="text-4xl ml-[88%] mt-4 font-semibold cursor-pointer" onClick={()=>setShow(false)}/>
         <ul className="w-full h-1/2 text-3xl ml-20 mt-4">
+          {visNavs?
+          <li className={`mb-4 cursor-pointer opacity-50 hover:-ml-2 hover:opacity-100`} onClick={()=>setShow(false)}><Link to="/">Home</Link></li>
+          :
           <li className={`mb-4 cursor-pointer opacity-50 hover:-ml-2 hover:opacity-100`} onClick={()=>setShow(false)}><a href="#home">Home</a></li>
-          <li className={`mb-4 cursor-pointer opacity-50 hover:-ml-2 hover:opacity-100`} onClick={()=>setShow(false)}><a href="#about">About</a></li>
-          <li className={`mb-4 cursor-pointer opacity-50 hover:-ml-2 hover:opacity-100`} onClick={()=>setShow(false)}><a href="#projects">Projects</a></li>
+          }
+          {
+            !visNavs?
+            <>
+              <li className={`mb-4 cursor-pointer opacity-50 hover:-ml-2 hover:opacity-100`} onClick={()=>setShow(false)}><a href="#about">About</a></li>
+              <li className={`mb-4 cursor-pointer opacity-50 hover:-ml-2 hover:opacity-100`} onClick={()=>setShow(false)}><a href="#projects">Projects</a></li>
+            </>
+            :""
+          }
         </ul>
       </div>
     </>

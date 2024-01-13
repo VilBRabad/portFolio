@@ -23,7 +23,7 @@ function LastPage() {
          <div className="contact z-10 mt-6 lg:mt-0 text-md italic opacity-60 flex items-center gap-1">
           <CgMail className="text-2xl"/><span>rabadvilas11@gmail.com</span>
          </div>
-        <div className="Top absolute w-12 h-12 flex items-center justify-center text-3xl border-2 bottom-4 lg:right-4 rounded-full">
+        <div className="Top absolute w-10 h-10 flex items-center justify-center text-2xl border-2 bottom-4 lg:right-4 rounded-full">
           <a href="#home"><FaArrowUp/></a>
         </div>
       </div>

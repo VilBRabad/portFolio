@@ -26,7 +26,7 @@
    }
 
    .projCard{
-      @apply flex flex-col items-center justify-center gap-2 h-[25rem] w-[90%] rounded-[2rem]  backdrop-blur-md md:w-[60%] lg:w-1/2;
+      @apply flex flex-col items-center justify-center gap-2 h-[25rem] w-[90%] rounded-[1rem]  backdrop-blur-md md:w-[60%] lg:w-1/2;
    }
    .photo{
       @apply h-[70%] w-[90%] rounded-xl flex items-center justify-center;
