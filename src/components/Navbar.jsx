@@ -38,7 +38,7 @@ function Navbar({ visible, visNavs, setVisNavs, refs }) {
             <div className={ `flex justify-around text-md items-center hidden md:block` }>
               <ul className="flex justify-between text-md items-center mr-[5%]">
                 { visNavs ?
-                  <li onClick={ handleClick } className={ `hover:bg-slate-600/25 rounded-[10rem] cursor-pointer ${refs.homeVis ? "bg-slate-600/25" : "bg-transparent"}` }><Link to="/">Home</Link></li>
+                  <li onClick={ handleClick } className={ `hover:bg-slate-600/25 rounded-[10rem] cursor-pointer ${refs.homeVis ? "bg-slate-600/25" : "bg-transparent"}` }><Link to="/portFolio">Home</Link></li>
                   :
                   <li className={ `hover:bg-slate-600/25 rounded-[10rem] cursor-pointer ${refs.homeVis ? "bg-slate-600/25" : "bg-transparent"}` }><a href="#home">Home</a></li>
                 }
