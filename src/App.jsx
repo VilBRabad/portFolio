@@ -27,7 +27,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<LandingPage setVisible={setVisible} refs={{homeRef, aboutRef, projectRef}} setVisNavs={setVisNavs} />} />
         <Route exact path="/:path" element={<ErrorPage />} />
-        <Route exact path="/project/details" element={<ProjDetails setVisNavs={setVisNavs} />} />
+        <Route exact path="/project/:name" element={<ProjDetails setVisNavs={setVisNavs}/>} />
       </Routes>
     </BrowserRouter>
   );
