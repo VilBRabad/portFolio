@@ -59,13 +59,16 @@ function ProjDetails({ setVisNavs }) {
    useEffect(() => {
       setVisNavs(true);
       setPara(name);
+
+      if(!data[para]){
+         return <p>Not Found</p>
+      }
       // console.log(para);
    }, []);
 
    useEffect(() => {
       window.scroll(0, 0);
    }, [location.pathname]);
-
 
    // console.log(data[para]);
 

@@ -28,8 +28,8 @@ function App() {
       <BrowserRouter>
         <Navbar visible={ visible } visNavs={ visNavs } setVisNavs={ setVisNavs } refs={ { homeVis, aboutVis, projectVis } } />
         <Routes>
-          <Route exact path="/" element={ <LandingPage setVisible={ setVisible } refs={ { homeRef, aboutRef, projectRef } } setVisNavs={ setVisNavs } /> } />
-          <Route exact path="/:path" element={ <ErrorPage /> } />
+          <Route exact path="/portFolio" element={ <LandingPage setVisible={ setVisible } refs={ { homeRef, aboutRef, projectRef } } setVisNavs={ setVisNavs } /> } />
+          <Route exact path="/portFolio/:path" element={ <ErrorPage /> } />
           <Route exact path="/project/:name" element={ <ProjDetails setVisNavs={ setVisNavs } /> } />
         </Routes>
       </BrowserRouter>
