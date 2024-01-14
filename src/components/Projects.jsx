@@ -71,7 +71,7 @@ function Projects({ projectRef }) {
             </div>
             <div className="con">
               <div className="det">
-                <div onClick={ () => navigate("/project/donateMe") } className="name cursor-pointer">Donate.me | <span className="opacity-70">Blood Bank</span></div>
+                <div onClick={ () => navigate("/project/donateMe") } className="name cursor-pointer">Donate.me | <span className="opacity-70 ">Blood Bank</span></div>
                 <div className="stack">React.JS | CSS | Flask | MySQL | Figma</div>
               </div>
               <div className="gitIcon"><Link to="https://github.com/VilBRabad/blood-bank-system" target="_blank"><img src={ github } alt="" className="dark:invert" /></Link></div>

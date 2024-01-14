@@ -47,7 +47,7 @@
       @apply mt-4 text-justify hidden lg:flex;
    }
    .photo{
-      @apply h-[70%] w-[90%] rounded-xl flex items-center justify-center;
+      @apply h-[65%] lg:h-[70%] w-[90%] rounded-xl flex items-center justify-center;
    }
    .con{
       @apply h-[20%] w-[90%] flex justify-between items-center;
@@ -63,7 +63,7 @@
       @apply text-xl md:text-2xl font-semibold;
    }
    .stack{
-      @apply h-[1.6rem] w-[60%] text-sm opacity-70;
+      @apply h-[1.6rem] text-sm opacity-70;
    }
    .gitIcon{
       @apply h-[3rem] w-[3rem] mt-4 flex items-center justify-center text-4xl rounded-full;
