@@ -1,10 +1,15 @@
 import React from 'react'
-import photo from "../Images/photo.png";
-import { FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
-import { FaReact, FaNodeJs, FaPython} from "react-icons/fa";
-import { SiTailwindcss, SiFlask, SiMysql } from "react-icons/si";
-import { TbBrandCpp } from "react-icons/tb";
-import { IoLogoJavascript } from "react-icons/io";
+import photo from "../Images/photo1.png";
+import react from "../Images/Icons/react.svg"
+import cpp from "../Images/Icons/cpp.svg"
+import nodejs from "../Images/Icons/nodejs.svg"
+import flask from "../Images/Icons/flask.svg"
+import mysql from "../Images/Icons/mysql.svg"
+import python from "../Images/Icons/python.svg"
+import javascript from "../Images/Icons/javascript.svg"
+import tailwind from "../Images/Icons/tailwind.svg"
+import twitter from "../Images/Icons/twitter.svg";
+import linkedin from "../Images/Icons/linkedin.svg";
 
 function About({aboutRef}) {
   const twitLink = "https://twitter.com/RabadVilas?t=wr7taO-ajwPKxDZusn5TXw&s=08";
@@ -22,7 +27,6 @@ function About({aboutRef}) {
           <div data-aos="fade-in" da  ta-aos-duration="1000"  className="w-[15rem] h-[15rem] flex items-center justify-center backdrop-blur-sm bg-gradient-to-b from-slate-300 to-slate-300/10 dark:bg-gradient-to-b dark:from-higherCardColor dark:to-lowerCardColor rounded-full md:w-[20rem] md:h-[20rem] overflow-hidden">
             <img src={photo} className="w-[90%] mt-8 drop-shadow-lg dark:brightness-[0.8] contrast-[1.07]" alt="" />
           </div>
-          {/* <div className="w-[20rem] h-[7rem] bg-red-400 rounded-3xl hidden lg:flex"></div> */}
         </div>
         <div className="w-full h-auto flex flex-col items-center gap-4 lg:h-[90%] lg:w-[65%] 2xl:w-[55rem]">
           <div className="w-[90%] h-auto flex flex-col gap-4 lg:h-[70%] lg:w-full lg:flex-row">
@@ -33,9 +37,9 @@ function About({aboutRef}) {
             <div className="w-[100%] h-[10rem] flex gap-2 lg:flex-col lg:h-full lg:w-[31%]">
               <div data-aos="fade-down" className="w-1/2 h-full backdrop-blur-sm bg-gradient-to-b from-slate-300 to-slate-300/10 dark:bg-gradient-to-b dark:from-higherCardColor dark:to-lowerCardColor rounded-2xl lg:h-[45%] lg:w-full p-4 text-lg font-semibold z-[5]">
                 <span>Connect With</span>
-                <div className="flex mt-4 text-[3rem] md:text-[4rem] justify-around">
-                  <FaXTwitter className="cursor-pointer" onClick={()=>clickHandler(twitLink)}/>
-                  <FaLinkedinIn className="cursor-pointer" onClick={()=>clickHandler(linkedinLink)}/>
+                <div className="flex mt-4 justify-around">
+                  <img src={twitter} alt="" className="cursor-pointer" onClick={()=>clickHandler(twitLink)}/>
+                  <img src={linkedin} alt="" className="cursor-pointer" onClick={()=>clickHandler(linkedinLink)}/>
                 </div>
               </div>
               <div data-aos="fade-down" className="w-1/2 h-full backdrop-blur-sm bg-gradient-to-b from-slate-300 to-slate-300/10 dark:bg-gradient-to-b dark:from-higherCardColor dark:to-lowerCardColor rounded-2xl lg:h-[55%] lg:w-full p-4 text-lg z-[4]">
@@ -48,15 +52,15 @@ function About({aboutRef}) {
             </div>
           </div>
           <div data-aos="fade-up" data-aos-duration="2000" className="w-[90%] h-[7rem] overflow-x-scroll lg:overflow-hidden flex items-center backdrop-blur-sm bg-gradient-to-b from-slate-300 to-slate-300/10 dark:bg-gradient-to-b dark:from-higherCardColor dark:to-lowerCardColor rounded-2xl lg:w-full">
-            <div className="h-full w-[100em] mx-4 gap-4 flex text-[3rem] md:text-[4rem] items-center justify-around ">
-              <FaReact className="transition hover:text-blue-400"/>
-              <FaNodeJs className="transition hover:text-green-600"/>
-              <SiTailwindcss className="transition hover:text-blue-400"/>
-              <SiFlask className="transition hover:text-cyan-500"/>
-              <SiMysql className="transition hover:text-sky-700"/>
-              <TbBrandCpp className="transition hover:text-sky-500"/>
-              <IoLogoJavascript className="transition hover:text-yellow-400"/>
-              <FaPython className="transition hover:text-yellow-300"/>
+            <div className="h-full w-[100em] mx-4 gap-4 flex items-center justify-start md:justify-around ">
+              <img src={react} alt="" />
+              <img src={nodejs} alt="" />
+              <img src={tailwind} alt="" />
+              <img src={flask} alt="" className="dark:invert invert-0"/>
+              <img src={mysql} alt="" />
+              <img src={javascript} alt="" />
+              <img src={cpp} alt="" />
+              <img src={python} alt="" />
             </div>
           </div>
         </div>

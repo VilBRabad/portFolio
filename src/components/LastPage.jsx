@@ -1,6 +1,6 @@
 import React from 'react'
-import { FaArrowUp } from "react-icons/fa";
-import { CgMail } from "react-icons/cg";
+import mail from "../Images/Icons/mail.svg";
+import arrow from "../Images/Icons/arrow.svg";
 
 function LastPage() {
 
@@ -22,8 +22,9 @@ function LastPage() {
             <div onClick={ handleClick } className="btn m-4 ml-0 z-10 max-sm:m-0 max-sm:mt-4">Lets Work Together</div>
             <a href="#projects" className="w-[8rem] h-10 z-10"><div className="w-full h-full bg-slate-700 cursor-pointer mt-4 rounded-full flex justify-center items-center text-md font-semibold transition-all duration-300 ease-in-out hover:bg-blue-500 text-white dark:hover:text-black max-sm:m-0 max-sm:mt-4">My Work</div></a>
           </div>
-          <div className="contact z-10 mt-6 lg:mt-0 text-md italic dark:opacity-60 flex items-center gap-1">
-            <CgMail className="text-2xl opacity-60" /><span>rabadvilas11@gmail.com</span>
+          <div className="contact z-10 mt-6 lg:mt-0 text-[1.2rem] italic dark:opacity-60 flex items-center gap-1">
+            <img src={mail} alt="" className="h-7 ml-2 opacity-60 mr-2 invert dark:invert-0" />
+            <span>rabadvilas11@gmail.com</span>
           </div>
         </div>
         <div className="w-full md:w-[50%] h-[50%] md:h-full flex md:justify-center items-center z-10">
@@ -34,8 +35,8 @@ function LastPage() {
             <button disabled className="w-[12rem] h-10 bg-slate-700 cursor-not-allowed m-4 ml-0 rounded-full text-white text-md font-semibold">Send</button>
           </form>
         </div>
-        <div className="Top absolute w-10 h-10 flex items-center justify-center text-2xl border-2 border-black dark:border-white bottom-12 md:bottom-4 lg:right-4 rounded-full">
-          <a href="#home"><FaArrowUp /></a>
+        <div className="Top absolute w-10 h-10 flex items-center justify-center bottom-12 md:bottom-4 lg:right-4">
+          <a href="#home"><img src={arrow} alt="" className="invert dark:invert-0"/></a>
         </div>
       </div>
       <div className="colors absolute h-[15rem] w-[15rem] lg:h-[25rem] lg:w-[25rem] bg-[#F806CC] opacity-[20%] top-[35%] left-[45%] rounded-full blur-3xl z-2" />

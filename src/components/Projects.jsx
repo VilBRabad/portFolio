@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import pr1 from "../Images/p1.png";
 import pr2 from "../Images/pr2.png";
 import pr3 from "../Images/pr3.png";
-import { FaGithub } from "react-icons/fa";
-import { Link, redirect, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import github from "../Images/Icons/github.svg";
 
 function Projects({ projectRef }) {
 
@@ -51,7 +51,7 @@ function Projects({ projectRef }) {
                 <div onClick={ () => navigate("/project/myPortfolio") } className="name cursor-pointer">My PortFolio</div>
                 <div className="stack">React.Js | Tailwind | Figma</div>
               </div>
-              <div className="gitIcon"><Link to="https://github.com/VilBRabad/portFolio" target="_blank"><FaGithub /></Link></div>
+              <div className="gitIcon"><Link to="https://github.com/VilBRabad/portFolio" target="_blank"><img src={github} alt="" className="dark:invert" /></Link></div>
             </div>
           </div>
           <div className="projInfo lg:items-start">
@@ -73,7 +73,7 @@ function Projects({ projectRef }) {
                 <div onClick={ () => navigate("/project/donateMe") } className="name cursor-pointer">Donate.me | <span className="opacity-70">Blood Bank</span></div>
                 <div className="stack">React.JS | CSS | Flask | MySQL | Figma</div>
               </div>
-              <div className="gitIcon"><Link to="https://github.com/VilBRabad/blood-bank-system" target="_blank"><FaGithub /></Link></div>
+              <div className="gitIcon"><Link to="https://github.com/VilBRabad/blood-bank-system" target="_blank"><img src={github} alt="" className="dark:invert" /></Link></div>
             </div>
           </div>
           <div className="projInfo lg:items-end">
@@ -95,7 +95,7 @@ function Projects({ projectRef }) {
                 <div onClick={ () => navigate("/project/salesAnalysis") } className="name cursor-pointer">Big-Mart Sales Visualizer</div>
                 <div className="stack">Django | Python | HTML | CSS</div>
               </div>
-              <div className="gitIcon"><Link to="https://github.com/VilBRabad/Big-Mart-Sales-Visualization" target="_blank"><FaGithub /></Link></div>
+              <div className="gitIcon"><Link to="https://github.com/VilBRabad/Big-Mart-Sales-Visualization" target="_blank"><img src={github} alt="" className="dark:invert" /></Link></div>
             </div>
           </div>
           <div className="projInfo lg:items-start">

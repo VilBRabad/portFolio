@@ -1,9 +1,10 @@
-import React, {useEffect, useState} from 'react'
-import About from './About'
+import React, {useEffect, Suspense, useState} from 'react'
+import { useLocation } from 'react-router-dom';
 import Home from './Home'
-import Projects from './Projects'
-import LastPage from './LastPage'
-import { useLocation } from 'react-router-dom'
+import AboutLoad from './AboutLoad';
+const About = React.lazy(()=>import('./About')); 
+const Projects = React.lazy(()=>import('./Projects')); 
+const LastPage = React.lazy(()=>import('./LastPage')); 
 
 function LandingPage({ setVisible, setVisNavs, refs}) {
 
@@ -19,10 +20,16 @@ function LandingPage({ setVisible, setVisNavs, refs}) {
 
    return (
       <>
-         <Home setVisible={ setVisible } homeRef={refs.homeRef}/>,
-         <About aboutRef={refs.aboutRef}/>,
-         <Projects projectRef={refs.projectRef}/>,
-         <LastPage />
+         <Home setVisible={ setVisible } homeRef={refs.homeRef}/>
+         <Suspense fallback={<AboutLoad aboutRef={refs.aboutRef}/>}>
+            <About aboutRef={refs.aboutRef}/>
+         </Suspense>
+         <Suspense fallback={<p>Loading....</p>}>
+            <Projects projectRef={refs.projectRef}/>
+         </Suspense>
+         <Suspense fallback={<p>Loading....</p>}>
+            <LastPage />
+         </Suspense>
       </>
    )
 }

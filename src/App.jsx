@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useInView } from 'react-intersection-observer';
 import './App.css';
 import Navbar from './components/Navbar';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import ErrorPage from './components/ErrorPage';
-import ProjDetails from './components/ProjDetails';
 import LandingPage from './components/LandingPage';
-import { useInView } from 'react-intersection-observer';
+const ProjDetails = React.lazy(() => import('./components/ProjDetails'));
+const ErrorPage = React.lazy(() => import('./components/ErrorPage'));
 
 
 function App() {
@@ -29,9 +29,21 @@ function App() {
         <Navbar visible={ visible } visNavs={ visNavs } setVisNavs={ setVisNavs } refs={ { homeVis, aboutVis, projectVis } } />
         <Routes>
           <Route exact path="/" element={ <LandingPage setVisible={ setVisible } refs={ { homeRef, aboutRef, projectRef } } setVisNavs={ setVisNavs } /> } />
-          <Route exact path="/:path" element={ <ErrorPage setVisNavs={ setVisNavs } /> } />
-          <Route exact path="/project/:name" element={ <ProjDetails setVisNavs={ setVisNavs } /> } />
-          <Route exact path="/project/:name/:path" element={ <ErrorPage setVisNavs={ setVisNavs } /> } />
+          <Route exact path="/:path" element={
+            <Suspense fallback={ <p>Loading...</p> }>
+              <ErrorPage setVisNavs={ setVisNavs } />
+            </Suspense> }
+          />
+          <Route exact path="/project/:name" element={
+            <Suspense fallback={ <p>Loading...</p> }>
+              <ProjDetails setVisNavs={ setVisNavs } />
+            </Suspense> }
+          />
+          <Route exact path="/project/:name/:path" element={
+            <Suspense fallback={ <p>Loading...</p> }>
+              <ErrorPage setVisNavs={ setVisNavs } />
+            </Suspense> }
+          />
         </Routes>
       </Router>
     </div>
