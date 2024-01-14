@@ -1,4 +1,4 @@
-import React, { useState, Suspense } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 import './App.css';
@@ -11,17 +11,15 @@ const ErrorPage = React.lazy(() => import('./components/ErrorPage'));
 
 
 function App() {
-  // useEffect(() => {
-  Aos.init();
-  // }, []);
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
   const [visible, setVisible] = useState(false);
   const [visNavs, setVisNavs] = useState(false);
   const { ref: homeRef, inView: homeVis } = useInView();
   const { ref: aboutRef, inView: aboutVis } = useInView();
   const { ref: projectRef, inView: projectVis } = useInView();
-
-
 
   return (
     <div className="bg-white dark:bg-gradient-to-br to-[#030923] from-slate-950">

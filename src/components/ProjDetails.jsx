@@ -65,7 +65,6 @@ function ProjDetails({ setVisNavs }) {
       },
    }
 
-   // console.log("Component rendering");
    const location = useLocation();
    const { name } = useParams();
    const [para, setPara] = useState(name);
@@ -74,22 +73,14 @@ function ProjDetails({ setVisNavs }) {
    // Check if name exists
    if (name in data) exist = true;
 
-   // console.log(exist);
-
    useEffect(() => {
       setVisNavs(true);
-      try {
-         if (!exist) {
-            throw new Error("data not found");
-         }
-         // setPara(name);
-      } catch (error) {
-         console.log(error);
-      }
-   }, []);
+   }, [para]);
 
    useEffect(() => {
       window.scroll(0, 0);
+      // window.addEventListener("scroll", )
+
    }, [location.pathname]);
 
 
