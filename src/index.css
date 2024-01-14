@@ -79,4 +79,7 @@
    .feedform textarea{
       @apply w-[80%] md:w-[24rem] rounded-md p-3 outline-0 text-lg text-black dark:text-white bg-slate-700/20 dark:bg-slate-100/20; 
    }
+   .btn{
+      @apply w-[12rem] h-10 cursor-pointer bg-blue-500 rounded-full flex justify-center items-center text-white dark:text-black text-[1.05rem] font-semibold transition-all duration-300 ease-in-out hover:text-white dark:hover:text-white hover:bg-slate-700;
+   }
 }

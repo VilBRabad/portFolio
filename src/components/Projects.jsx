@@ -43,12 +43,12 @@ function Projects({ projectRef }) {
             <div data-aos="fade" data-aos-duration="1000" className="projDot"></div>
           </div>
           <div data-aos="fade-right" data-aos-duration="1000" className="projCard">
-            <div onClick={ () => navigate("/portFolio/project/myPortfolio") } className="photo cursor-pointer">
+            <div onClick={ () => navigate("/project/myPortfolio") } className="photo cursor-pointer">
               <img src={ pr1 } className="h-full w-[27rem]" alt="" />
             </div>
             <div className="con">
               <div className="det">
-                <div onClick={ () => navigate("/portFolio/project/myPortfolio") } className="name cursor-pointer">My PortFolio</div>
+                <div onClick={ () => navigate("/project/myPortfolio") } className="name cursor-pointer">My PortFolio</div>
                 <div className="stack">React.Js | Tailwind | Figma</div>
               </div>
               <div className="gitIcon"><Link to="https://github.com/VilBRabad/portFolio" target="_blank"><FaGithub /></Link></div>
@@ -65,7 +65,7 @@ function Projects({ projectRef }) {
             <div data-aos="fade" data-aos-duration="1000" className="projDot"></div>
           </div>
           <div data-aos="fade-left" data-aos-duration="1000" className="projCard">
-            <div onClick={ () => navigate("/portFolio/project/donateMe") } className="photo">
+            <div onClick={ () => navigate("/project/donateMe") } className="photo">
               <img className="w-[27rem] cursor-pointer" src={ pr2 } alt="" />
             </div>
             <div className="con">
@@ -87,7 +87,7 @@ function Projects({ projectRef }) {
             <div data-aos="fade" data-aos-duration="1000" className="projDot"></div>
           </div>
           <div data-aos="fade-right" data-aos-duration="1000" className="projCard">
-            <div onClick={ () => navigate("/portFolio/project/salesAnalysis") } className="photo cursor-pointer">
+            <div onClick={ () => navigate("/project/salesAnalysis") } className="photo cursor-pointer">
               <img className="w-[25rem]" src={ pr3 } alt="" />
             </div>
             <div className="con">

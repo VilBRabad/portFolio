@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import Aos from 'aos';
@@ -25,14 +25,15 @@ function App() {
 
   return (
     <div className="bg-white dark:bg-gradient-to-br to-[#030923] from-slate-950">
-      <BrowserRouter>
+      <Router basename="/portFolio">
         <Navbar visible={ visible } visNavs={ visNavs } setVisNavs={ setVisNavs } refs={ { homeVis, aboutVis, projectVis } } />
         <Routes>
-          <Route exact path="/portFolio" element={ <LandingPage setVisible={ setVisible } refs={ { homeRef, aboutRef, projectRef } } setVisNavs={ setVisNavs } /> } />
-          <Route exact path="/portFolio/:path" element={ <ErrorPage /> } />
-          <Route exact path="/portFolio/project/:name" element={ <ProjDetails setVisNavs={ setVisNavs } /> } />
+          <Route exact path="/" element={ <LandingPage setVisible={ setVisible } refs={ { homeRef, aboutRef, projectRef } } setVisNavs={ setVisNavs } /> } />
+          <Route exact path="/:path" element={ <ErrorPage setVisNavs={ setVisNavs } /> } />
+          <Route exact path="/project/:name" element={ <ProjDetails setVisNavs={ setVisNavs } /> } />
+          <Route exact path="/project/:name/:path" element={ <ErrorPage setVisNavs={ setVisNavs } /> } />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }

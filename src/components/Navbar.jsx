@@ -37,9 +37,9 @@ function Navbar({ visible, visNavs, setVisNavs, refs }) {
           <div className="flex">
             <div className={ `flex justify-around text-md items-center hidden md:block` }>
               <ul className="flex justify-between text-md items-center mr-[5%]">
-                { visNavs ?
-                  <li onClick={ handleClick } className={ `hover:bg-slate-600/25 rounded-[10rem] cursor-pointer ${refs.homeVis ? "bg-slate-600/25" : "bg-transparent"}` }><Link to="/portFolio">Home</Link></li>
-                  :
+                { visNavs ? 
+                  <Link to="/"><li onClick={ handleClick } className={ `hover:bg-slate-600/25 rounded-[10rem] cursor-pointer ${refs.homeVis ? "bg-slate-600/25" : "bg-transparent"}` }>Home</li></Link>
+                  : 
                   <li className={ `hover:bg-slate-600/25 rounded-[10rem] cursor-pointer ${refs.homeVis ? "bg-slate-600/25" : "bg-transparent"}` }><a href="#home">Home</a></li>
                 }
                 { !visNavs ?
@@ -67,7 +67,7 @@ function Navbar({ visible, visNavs, setVisNavs, refs }) {
         <RxCross2 className="text-4xl ml-[88%] mt-4 font-semibold cursor-pointer" onClick={ () => setShow(false) } />
         <ul className="w-full h-1/2 text-3xl ml-20 mt-4">
           { visNavs ?
-            <li className={ `mb-4 cursor-pointer opacity-50 hover:-ml-2 hover:opacity-100` } onClick={ () => setShow(false) }><Link to="/portFolio">Home</Link></li>
+            <li className={ `mb-4 cursor-pointer opacity-50 hover:-ml-2 hover:opacity-100` } onClick={ () => setShow(false) }><Link to="/">Home</Link></li>
             :
             <li className={ `mb-4 cursor-pointer opacity-50 hover:-ml-2 hover:opacity-100` } onClick={ () => setShow(false) }><a href="#home">Home</a></li>
           }

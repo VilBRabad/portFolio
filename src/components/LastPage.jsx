@@ -19,7 +19,7 @@ function LastPage() {
           <span className="text-[2.5rem] sm:text-start font-bold  md:text-[4rem] text-center">Thank You for Visiting</span>
           <span className="text-3xl font-bold opacity-40">Get in touch</span>
           <div className="flex my-4 gap-4 max-sm:flex-wrap max-sm:justify-center max-sm:gap-2">
-            <div onClick={ handleClick } className="w-[12rem] h-10 bg-blue-500 cursor-pointer m-4 ml-0 rounded-full flex justify-center items-center text-white dark:text-black text-md font-semibold transition-all duration-300 ease-in-out hover:text-white dark:hover:text-white hover:bg-slate-700 z-10 max-sm:m-0 max-sm:mt-4">Lets Work Together</div>
+            <div onClick={ handleClick } className="btn m-4 ml-0 z-10 max-sm:m-0 max-sm:mt-4">Lets Work Together</div>
             <a href="#projects" className="w-[8rem] h-10 z-10"><div className="w-full h-full bg-slate-700 cursor-pointer mt-4 rounded-full flex justify-center items-center text-md font-semibold transition-all duration-300 ease-in-out hover:bg-blue-500 text-white dark:hover:text-black max-sm:m-0 max-sm:mt-4">My Work</div></a>
           </div>
           <div className="contact z-10 mt-6 lg:mt-0 text-md italic dark:opacity-60 flex items-center gap-1">

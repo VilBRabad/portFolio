@@ -52,81 +52,98 @@ function ProjDetails({ setVisNavs }) {
       },
    }
 
+   // console.log("Component rendering");
    const location = useLocation();
    const { name } = useParams();
    const [para, setPara] = useState(name);
-   
+   let exist = false;
+
+   // Check if name exists
+   if (name in data) exist = true;
+
+   // console.log(exist);
+
    useEffect(() => {
       setVisNavs(true);
-      setPara(name);
-
-      if(!data[para]){
-         return <p>Not Found</p>
+      try {
+         if (!exist) {
+            throw new Error("data not found");
+         }
+         // setPara(name);
+      } catch (error) {
+         console.log(error);
       }
-      // console.log(para);
    }, []);
 
    useEffect(() => {
       window.scroll(0, 0);
    }, [location.pathname]);
 
-   // console.log(data[para]);
 
    return (
-      <div className="min-h-screen w-screen dark:text-white flex justify-center">
-         <div className="relative my-8 h-full w-[100%] lg:w-[60rem] flex flex-col items-center gap-8">
-            <div className="flex flex-col items-center sm:flex-row h-[30rem] sm:h-[20rem] w-[90%] justify-center gap-2 sm:gap-4">
-               <div data-aos="fade-in"  data-aos-duration="2000" className="h-[28rem] w-[20rem] flex items-center justify-center sm:h-full sm:w-[45rem] bg-slate-950/10 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl p-6"><img src={ data[para].image } id="img" alt="" /></div>
-               <div className="h-full w-[20rem] sm:w-full flex flex-col gap-2 sm:gap-4">
-                  <div data-aos="fade-left"  data-aos-duration="1000" className="w-full h-[30%] flex items-center justify-between pl-4 text-xl font-semibold bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl">
-                     { data[para].name }
-                     <Link to={ data[para].link } target="_blank"><FaGithub className="text-3xl mr-6" /></Link>
-                  </div>
-                  <div data-aos="fade-left"  data-aos-duration="1500" className="w-full h-[30%] flex justify-center md:justify-start items-center dark:text-white/50 md:pl-4 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl ">{ data[para].date }</div>
-                  <div data-aos="fade-left"  data-aos-duration="2000" className="w-full h-[30%] flex justify-center md:justify-start items-center md:pl-4 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl gap-4">
-                     {
-                        data[para].techStack.map((stack, index) =>
-                           <span className="text-3xl md:text-5xl" key={ index }>{ stack }</span>
-                        )
-                     }
-                  </div>
-               </div>
+      !exist ?
+         <div className="min-h-screen text-3xl w-screen dark:text-white flex flex-col justify-center items-center gap-6">
+            <div className="bg-slate-500/30 p-4 flex items-center justify-center h-[4rem] w-[80%] md:w-[25rem] gap-4 rounded-lg">
+               <span className="no-underline text-2xl opacity-60">Project:</span>
+               <span className="underline truncate">{name}</span>
             </div>
-            <div data-aos="fade-in"  data-aos-duration="1000" className="w-[90%] h-auto overflow-hidden bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl p-6">
-               <div className="flex flex-col lg:flex-row  gap-4 text-justify mt-8">
-                  <span className="font-semibold">Description:</span>
-                  { data[para].desc }
+            <span className="">Page Not Found</span>
+         </div>
+         :
+         <div className="min-h-screen w-screen dark:text-white flex justify-center">
+               <div className="relative my-8 h-[100%] w-[100%] lg:w-[60rem] flex flex-col items-center gap-8">
+               <div className="flex flex-col items-center sm:flex-row h-[30rem] sm:h-[20rem] w-[90%] justify-center gap-2 sm:gap-4">
+                  <div data-aos="fade-in" data-aos-duration="2000" className="h-[28rem] w-[20rem] flex items-center justify-center sm:h-full sm:w-[45rem] bg-slate-950/10 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl p-6"><img src={ data[para].image } id="img" alt="" /></div>
+                  <div className="h-full w-[20rem] sm:w-full flex flex-col gap-2 sm:gap-4">
+                     <div data-aos="fade-left" data-aos-duration="1000" className="w-full h-[30%] flex items-center justify-between pl-4 text-xl font-semibold bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl">
+                        { data[para].name }
+                        <Link to={ data[para].link } target="_blank"><FaGithub className="text-3xl mr-6" /></Link>
+                     </div>
+                     <div data-aos="fade-left" data-aos-duration="1500" className="w-full h-[30%] flex justify-center md:justify-start items-center dark:text-white/50 md:pl-4 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl ">{ data[para].date }</div>
+                     <div data-aos="fade-left" data-aos-duration="2000" className="w-full h-[30%] flex justify-center md:justify-start items-center md:pl-4 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl gap-4">
+                        {
+                           data[para].techStack.map((stack, index) =>
+                              <span className="text-3xl md:text-5xl" key={ index }>{ stack }</span>
+                           )
+                        }
+                     </div>
+                  </div>
                </div>
-               { !data[para].features ?
-                  <></>
-                  :
+               <div data-aos="fade-in" data-aos-duration="1000" className="w-[90%] h-auto overflow-hidden bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl p-6">
+                  <div className="flex flex-col lg:flex-row  gap-4 text-justify mt-8">
+                     <span className="font-semibold">Description:</span>
+                     { data[para].desc }
+                  </div>
+                  { !data[para].features ?
+                     <></>
+                     :
+                     <div className="flex flex-col lg:flex-row gap-4 text-justify mt-8">
+                        <span className="font-semibold">Features:</span>
+                        <ol className="flex flex-col gap-2 ml-4 list-decimal">
+                           { data[para].features.map((feat, index) =>
+                              <li key={ index }>{ feat }</li>
+                           ) }
+                        </ol>
+                     </div>
+                  }
                   <div className="flex flex-col lg:flex-row gap-4 text-justify mt-8">
-                     <span className="font-semibold">Features:</span>
+                     <span className="font-semibold">Challenges:</span>
                      <ol className="flex flex-col gap-2 ml-4 list-decimal">
-                        { data[para].features.map((feat, index) =>
-                           <li key={ index }>{ feat }</li>
+                        { data[para].challenges.map((chal, index) =>
+                           <li key={ index }>{ chal }</li>
                         ) }
                      </ol>
                   </div>
-               }
-               <div className="flex flex-col lg:flex-row gap-4 text-justify mt-8">
-                  <span className="font-semibold">Challenges:</span>
-                  <ol className="flex flex-col gap-2 ml-4 list-decimal">
-                     { data[para].challenges.map((chal, index) =>
-                        <li key={ index }>{ chal }</li>
-                     ) }
-                  </ol>
                </div>
-            </div>
-            {
-               !data[para].dig ?
-                  <></>
-                  :
-                  <div data-aos="fade-in"  data-aos-duration="1000" className="w-[90%] h-auto py-8 px-2 md:px-6 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md  rounded-xl flex flex-col items-center gap-10">
-                     <span className="text-md lg:text-2xl font-semibold">DIAGRAM</span>
+               {
+                  !data[para].dig ?
+                     <></>
+                     :
+                     <div data-aos="fade-in" data-aos-duration="1000" className="w-[90%] h-auto py-8 px-2 md:px-6 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md  rounded-xl flex flex-col items-center gap-10">
+                        <span className="text-md lg:text-2xl font-semibold">DIAGRAM</span>
                         <img className="invert dark:invert-0" src={ data[para].dig } alt="" />
-                  </div>
-            }
+                     </div>
+               }
          </div>
       </div>
    )
