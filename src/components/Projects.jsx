@@ -43,12 +43,12 @@ function Projects({ projectRef }) {
             <div data-aos="fade" data-aos-duration="1000" className="projDot"></div>
           </div>
           <div data-aos="fade-right" data-aos-duration="1000" className="projCard">
-            <div onClick={ () => navigate("/project/myPortfolio") } className="photo cursor-pointer">
+            <div onClick={ () => navigate("/portFolio/project/myPortfolio") } className="photo cursor-pointer">
               <img src={ pr1 } className="h-full w-[27rem]" alt="" />
             </div>
             <div className="con">
               <div className="det">
-                <div onClick={ () => navigate("/project/myPortfolio") } className="name cursor-pointer">My PortFolio</div>
+                <div onClick={ () => navigate("/portFolio/project/myPortfolio") } className="name cursor-pointer">My PortFolio</div>
                 <div className="stack">React.Js | Tailwind | Figma</div>
               </div>
               <div className="gitIcon"><Link to="https://github.com/VilBRabad/portFolio" target="_blank"><FaGithub /></Link></div>
@@ -65,7 +65,7 @@ function Projects({ projectRef }) {
             <div data-aos="fade" data-aos-duration="1000" className="projDot"></div>
           </div>
           <div data-aos="fade-left" data-aos-duration="1000" className="projCard">
-            <div onClick={ () => navigate("/project/donateMe") } className="photo">
+            <div onClick={ () => navigate("/portFolio/project/donateMe") } className="photo">
               <img className="w-[27rem] cursor-pointer" src={ pr2 } alt="" />
             </div>
             <div className="con">
@@ -87,7 +87,7 @@ function Projects({ projectRef }) {
             <div data-aos="fade" data-aos-duration="1000" className="projDot"></div>
           </div>
           <div data-aos="fade-right" data-aos-duration="1000" className="projCard">
-            <div onClick={ () => navigate("/project/salesAnalysis") } className="photo cursor-pointer">
+            <div onClick={ () => navigate("/portFolio/project/salesAnalysis") } className="photo cursor-pointer">
               <img className="w-[25rem]" src={ pr3 } alt="" />
             </div>
             <div className="con">
@@ -100,7 +100,7 @@ function Projects({ projectRef }) {
           </div>
           <div className="projInfo lg:items-start">
             <div data-aos="fade-left" className="projDate">29 May 2023</div>
-            <div data-aos="fade-left" data-aos-duration="1000" className="shortDetail ml-4">Welcome to my professional portfolio, a dedicated space designed to showcase my skills, experiences, and creative journey. This platform is a reflection of my passion for Web Development and Designing, highlighting not only what I've accomplished but also the potential I bring to future endeavors.</div>
+            <div data-aos="fade-left" data-aos-duration="1000" className="shortDetail ml-4">This project focuses on the visualization of sales data for a fictional retail chain, Big Mart, using the Python programming language and the Matplotlib data visualization library. The main objective of this project is to provide insights into the sales trends of the retail chain using graphical representations such as line charts, bar charts, scatter plots, and histograms.</div>
           </div>
         </div>
       </div>

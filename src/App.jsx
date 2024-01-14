@@ -30,7 +30,7 @@ function App() {
         <Routes>
           <Route exact path="/portFolio" element={ <LandingPage setVisible={ setVisible } refs={ { homeRef, aboutRef, projectRef } } setVisNavs={ setVisNavs } /> } />
           <Route exact path="/portFolio/:path" element={ <ErrorPage /> } />
-          <Route exact path="/project/:name" element={ <ProjDetails setVisNavs={ setVisNavs } /> } />
+          <Route exact path="/portFolio/project/:name" element={ <ProjDetails setVisNavs={ setVisNavs } /> } />
         </Routes>
       </BrowserRouter>
     </div>

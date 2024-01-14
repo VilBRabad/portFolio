@@ -31,7 +31,7 @@ function LastPage() {
             <input type="text" placeholder="Name" />
             <input type="mail" placeholder="Email"/>
             <textarea placeholder="Message" rows="4" cols="8"/>
-            <button className="w-[12rem] h-10 bg-slate-700 cursor-not-allowed m-4 ml-0 rounded-full text-white text-md font-semibold">Send</button>
+            <button disabled className="w-[12rem] h-10 bg-slate-700 cursor-not-allowed m-4 ml-0 rounded-full text-white text-md font-semibold">Send</button>
           </form>
         </div>
         <div className="Top absolute w-10 h-10 flex items-center justify-center text-2xl border-2 border-black dark:border-white bottom-12 md:bottom-4 lg:right-4 rounded-full">
