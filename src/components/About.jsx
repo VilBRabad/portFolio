@@ -38,15 +38,15 @@ function About({aboutRef}) {
               <div data-aos="fade-down" className="w-1/2 h-full backdrop-blur-sm bg-gradient-to-b from-slate-300 to-slate-300/10 dark:bg-gradient-to-b dark:from-higherCardColor dark:to-lowerCardColor rounded-2xl lg:h-[45%] lg:w-full p-4 text-lg font-semibold z-[5]">
                 <span>Connect With</span>
                 <div className="flex mt-4 justify-around">
-                  <img src={twitter} alt="" className="cursor-pointer" onClick={()=>clickHandler(twitLink)}/>
-                  <img src={linkedin} alt="" className="cursor-pointer" onClick={()=>clickHandler(linkedinLink)}/>
+                  <img src={twitter} alt="" className="cursor-pointer h-20" onClick={()=>clickHandler(twitLink)}/>
+                  <img src={linkedin} alt="" className="cursor-pointer h-20" onClick={()=>clickHandler(linkedinLink)}/>
                 </div>
               </div>
               <div data-aos="fade-down" className="w-1/2 h-full backdrop-blur-sm bg-gradient-to-b from-slate-300 to-slate-300/10 dark:bg-gradient-to-b dark:from-higherCardColor dark:to-lowerCardColor rounded-2xl lg:h-[55%] lg:w-full p-4 text-lg z-[4]">
                 <span className="font-semibold">Skills</span>
-                <div className="mt-2 lg:mt-4 text-[1rem] md:text-lg flex flex-col justify-center gap-4 h-[60%]">
-                  <span>Web Development</span>
-                  <span>React Development</span>
+                <div className="mt-2 lg:mt-4 text-[1rem] md:text-lg flex flex-col justify-center gap-2 md:gap-4 h-[60%]">
+                  <span className="leading-normal">Web Development</span>
+                  <span className="leading-normal">React Development</span>
                 </div>
               </div>
             </div>
