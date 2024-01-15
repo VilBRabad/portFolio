@@ -1,5 +1,5 @@
 import React from 'react'
-import photo from "../Images/ph7.png";
+import photo from "../Images/ph71.png";
 import react from "../Images/Icons/react.svg"
 import cpp from "../Images/Icons/cpp.svg"
 import nodejs from "../Images/Icons/nodejs.svg"
@@ -33,7 +33,7 @@ function About({aboutRef}) {
           <div className="w-[98%] min-[404px]:w-[90%] h-auto flex flex-col gap-4 lg:h-[70%] lg:w-full lg:flex-row">
             <div data-aos="fade-up" data-aos-duration="2000" ref={aboutRef}  className="w-[100%] h-[20rem] backdrop-blur-sm bg-white drop-shadow-[0_10px_10px_rgba(0,0,0,0.25)] dark:bg-slate-900 rounded-2xl lg:h-full lg:w-[67%] flex flex-col p-2 sm:p-6 pt-8">
               <span className="text-2xl font-semibold ml-2 mb-2 md:mb-6">Vilas Balu Rabad</span>
-              <span className="text-justify overflow-y-scroll lg:overflow-hidden px-2 text-sm sm:text-lg leading-relaxed">Currently pursuing a Bachelor of Technology in Information Technology at Vishwakarma Institute of Information Technology (VIIT), Pune. My focus lies in web development, where I leverage ReactJS and diverse technologies to build user-centric, interactive experiences. I possess a strong foundation in problem-solving and a passion for crafting elegant solutions. Explore my portfolio to discover my capabilities and potential as a developer.</span>
+              <span className="text-justify overflow-y-scroll lg:overflow-hidden px-2 text-sm sm:text-lg leading-relaxed">Currently pursuing a B.Tech. in Information Technology at Vishwakarma Institute of Information Technology (VIIT), Pune. My focus lies in web development, where I leverage ReactJS and diverse technologies to build user-centric, interactive experiences. I possess a good foundation in problem-solving and a passion for crafting elegant solutions. Explore my portfolio to discover my capabilities and potential as a developer.</span>
             </div>
             <div className="w-[100%] h-auto max-[405px]:h-[20%] flex gap-2 lg:flex-col lg:h-full lg:w-[31%] max-[404px]:flex-col-reverse">
               <div data-aos="fade-down" className="min-[404px]:w-1/2 max-[405px]:h-1/2 flex justify-around items-center gap-4 min-[404px]:block  backdrop-blur-sm bg-white drop-shadow-[0_10px_10px_rgba(0,0,0,0.25)] dark:bg-slate-900 rounded-2xl lg:h-[45%] lg:w-full p-4 min-[335px]:text-lg font-semibold z-[5]">

@@ -15,7 +15,7 @@ function Navbar({ visible, visNavs, setVisNavs, refs }) {
   // console.log(localStorage.theme);
   // console.log(window.matchMedia);
 
-  const [lightMode, setLightMode] = useState(localStorage.theme==='dark'?false:true);
+  const [lightMode, setLightMode] = useState(localStorage.theme ==='light'?true:false);
 
   useEffect(() => {
     if (lightMode) {
