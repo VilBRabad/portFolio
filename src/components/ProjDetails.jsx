@@ -97,25 +97,27 @@ function ProjDetails({ setVisNavs }) {
                </div>
                :
                <div className="relative my-8 h-[100%] w-[100%] lg:w-[60rem] flex flex-col items-center gap-8">
-                  <div className="flex flex-col items-center sm:flex-row h-[30rem] sm:h-[20rem] w-[90%] justify-center gap-2 sm:gap-4">
-                     <div data-aos="fade-in" data-aos-duration="2000" className="h-[28rem] w-[20rem] flex items-center justify-center sm:h-full sm:w-[45rem] bg-slate-950/10 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl p-6"><img src={ data[para].image } id="img" alt="" /></div>
-                     <div className="h-full w-[20rem] sm:w-full flex flex-col gap-2 sm:gap-4">
+                  <div className="flex flex-col items-center sm:flex-row h-[35rem] sm:h-[20rem] w-[98%] min-[560px]:w-[90%] justify-center gap-2 sm:gap-4">
+                     <div data-aos="fade-in" data-aos-duration="2000" className="h-[20rem] w-[98%] flex items-center justify-center sm:h-full sm:w-[45rem] bg-slate-950/10 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl p-6">
+                        <img src={ data[para].image } id="img" className="h-[90%]" alt="" />
+                     </div>
+                     <div className="h-full w-full flex flex-col gap-2 sm:gap-4">
                         <div data-aos="fade-left" data-aos-duration="1000" className="w-full h-[30%] flex items-center justify-between pl-4 text-xl font-semibold bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl">
                            { data[para].name }
                            <Link to={ data[para].link } target="_blank"><img src={github} alt="" className="mr-6 h-12 dark:invert" /></Link>
                         </div>
-                        <div data-aos="fade-left" data-aos-duration="1500" className="w-full h-[30%] flex justify-center md:justify-start items-center dark:text-white/50 md:pl-4 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl ">{ data[para].date }</div>
-                        <div data-aos="fade-left" data-aos-duration="2000" className="w-full h-[30%] flex justify-center md:justify-start items-center md:pl-4 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl gap-4 overflow-x-scroll">
+                        <div data-aos="fade-left" data-aos-duration="1500" className="w-full h-[28%] flex justify-center px-4 md:justify-start items-center dark:text-white/50 md:pl-4 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl ">{ data[para].date }</div>
+                        <div data-aos="fade-left" data-aos-duration="2000" className="w-full h-[30%] flex  max-[315px]:justify-start justify-center min-[640px]:justify-start items-center py-2 px-4 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl gap-4 overflow-x-scroll">
                            {
                               data[para].techStack.map((stack, index) =>
-                                 <img className="text-3xl md:text-5xl" key={ index } src={ stack } alt="" />
+                                 <img className="h-10 md:h-14" key={ index } src={ stack } alt="" />
                               )
                            }
                         </div>
                      </div>
                   </div>
-                  <div data-aos="fade-in" data-aos-duration="1000" className="w-[90%] h-auto overflow-hidden bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl p-6">
-                     <div className="flex flex-col lg:flex-row  gap-4 text-justify mt-8">
+                  <div data-aos="fade-in" data-aos-duration="1000" className="w-[98%] min-[560px]:w-[90%] h-auto overflow-hidden bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md rounded-xl max-[365px]:text-[1rem] p-4 min-[465px]:p-6">
+                     <div className="flex flex-col lg:flex-row gap-4 text-justify mt-8">
                         <span className="font-semibold">Description:</span>
                         { data[para].desc }
                      </div>
@@ -144,7 +146,7 @@ function ProjDetails({ setVisNavs }) {
                      !data[para].dig ?
                         <></>
                         :
-                        <div data-aos="fade-in" data-aos-duration="1000" className="w-[90%] h-auto py-8 px-2 md:px-6 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md  rounded-xl flex flex-col items-center gap-10">
+                        <div data-aos="fade-in" data-aos-duration="1000" className="w-[98%] min-[560px]:w-[90%] h-auto py-8 px-2 md:px-6 bg-slate-950/10 dark:bg-[#D9D9D9]/10 backdrop-blur-md  rounded-xl flex flex-col items-center gap-10">
                            <span className="text-md lg:text-2xl font-semibold">DIAGRAM</span>
                            <Suspense fallback={ <p>Loading....</p> }>
                               <ErLoader src={ data[para].dig } />

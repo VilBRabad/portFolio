@@ -19,17 +19,17 @@
       transition: width 1s;
    }
    .title{
-      @apply text-3xl mt-16 font-semibold;
+      @apply text-2xl sm:text-3xl mt-16 font-semibold;
    }
    .about{
       /* @apply animate-pulse; */
    }
 
    .proj{
-      @apply relative h-[80%] w-full mt-10 flex flex-col-reverse justify-center gap-2 items-center lg:items-start lg:gap-10 xl:gap-20
+      @apply relative h-[80%] w-full mt-10 flex flex-col-reverse justify-center gap-2 items-center md:items-start md:gap-10 xl:gap-20
    }
    .projCard{
-      @apply flex flex-col items-center justify-center gap-2 h-[25rem] w-[90%] rounded-[1rem]  backdrop-blur-md md:w-[60%] lg:w-1/2 bg-gradient-to-b from-slate-300 to-slate-300/70 dark:bg-gradient-to-b dark:from-higherCardColor dark:to-midCardColor z-10 xl:w-[33rem];
+      @apply flex flex-col items-center justify-center gap-2 h-[25rem] w-[98%] min-[375px]:w-[90%] rounded-[1rem] shadow-[5px_5px_30px_5px_rgba(0,0,0,0.25)]  hover:shadow-[1px_1px_10px_4px_rgba(0,0,0,0.25)] dark:hover:shadow-[0px_0px_0px_0px_rgba(0,0,0,0.25)] transition-all duration-300 backdrop-blur-md md:w-[60%]  md:w-1/2 bg-white/50 dark:bg-slate-900 z-10 xl:w-[33rem];
    }
    .dotClass{
       @apply absolute w-full flex justify-center -top-5 lg:top-5;
@@ -38,29 +38,29 @@
       @apply h-[1.5rem] w-[1.5rem] border-4 border-purple-800 bg-white dark:bg-black rounded-full z-[11];
    }
    .projInfo{
-      @apply relative h-[3rem] w-full flex flex-col lg:h-full lg:mt-3 items-center justify-center z-10 lg:w-1/2 xl:w-[33rem]
+      @apply relative h-[3rem] w-full flex flex-col md:h-full lg:mt-3 items-center justify-center z-10 md:w-1/2 xl:w-[33rem]
    }
    .projDate{
-      @apply h-10 flex items-center text-lg lg:text-2xl max-lg:bg-slate-300/80 max-lg:dark:bg-higherCardColor rounded-lg px-2 backdrop-blur-sm
+      @apply h-10 flex items-center md:text-lg lg:text-2xl max-lg:bg-white/30 shadow-md max-lg:dark:bg-higherCardColor rounded-lg px-2 backdrop-blur-sm
    }
    .shortDetail{
-      @apply mt-4 text-justify hidden lg:flex;
+      @apply mt-4 px-4 text-justify hidden md:text-lg md:flex;
    }
    .photo{
-      @apply h-[65%] lg:h-[70%] w-[90%] rounded-xl flex items-center justify-center;
+      @apply max-[315px]:h-[55%] h-[65%] lg:h-[70%] w-[90%] min-[490px]:pt-6 rounded-xl flex items-center justify-center;
    }
    .con{
-      @apply h-[20%] w-[90%] flex justify-between items-center;
+      @apply h-[25%] lg:h-[20%] w-[90%] flex justify-between items-center;
    }
    .det{
-      @apply h-full w-full
+      @apply h-full w-full flex flex-col justify-center gap-2;
    }
    .name,
    .stack{
-      @apply h-[2rem] w-[90%]  ml-4 mt-2 rounded-full;
+      @apply h-[2rem] w-[90%]  lg:ml-4 rounded-full;
    }
    .name{
-      @apply text-xl md:text-2xl font-semibold;
+      @apply leading-normal max-[372px]:text-[1.1rem] max-[396px]:text-[1.2rem] max-[460px]:text-[1.3rem] text-2xl font-semibold;
    }
    .stack{
       @apply h-[1.6rem] text-sm opacity-70;
@@ -71,15 +71,22 @@
 
 
    .modes{
-      @apply cursor-pointer lg:mr-2 mr-16;
+      @apply cursor-pointer lg:mr-2 mr-14;
+   }
+
+   .techstack img{
+      @apply max-sm:h-10 max-md:h-12;
    }
 
 
    .feedform input, 
    .feedform textarea{
-      @apply w-[80%] md:w-[24rem] rounded-md p-3 outline-0 text-lg text-black dark:text-white bg-slate-700/20 dark:bg-slate-100/20; 
+      @apply w-[98%] h-[3rem] min-[495px]:h-auto min-[495px]:w-[80%] md:w-[24rem] rounded-md p-3 outline-0 text-lg text-black dark:text-white bg-slate-700/20 dark:bg-slate-100/20; 
+   }
+   .feedform textarea{
+      @apply h-[6rem]
    }
    .btn{
-      @apply w-[12rem] h-10 cursor-pointer bg-blue-500 rounded-full flex justify-center items-center text-white dark:text-black text-[1.05rem] font-semibold transition-all duration-300 ease-in-out hover:text-white dark:hover:text-white hover:bg-slate-700;
+      @apply w-[12rem] h-8 cursor-pointer bg-blue-500 rounded-full flex justify-center items-center text-white dark:text-black text-[1.05rem] font-semibold transition-all duration-300 ease-in-out hover:text-white dark:hover:text-white hover:bg-slate-700;
    }
 }

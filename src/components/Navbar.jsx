@@ -15,7 +15,7 @@ function Navbar({ visible, visNavs, setVisNavs, refs }) {
   // console.log(localStorage.theme);
   // console.log(window.matchMedia);
 
-  const [lightMode, setLightMode] = useState(false);
+  const [lightMode, setLightMode] = useState(localStorage.theme==='dark'?false:true);
 
   useEffect(() => {
     if (lightMode) {
@@ -38,14 +38,14 @@ function Navbar({ visible, visNavs, setVisNavs, refs }) {
             <div className={ `flex justify-around text-md items-center hidden md:block` }>
               <ul className="flex justify-between text-md items-center mr-[5%]">
                 { visNavs ? 
-                  <Link to="/"><li onClick={ handleClick } className={ `hover:bg-slate-600/25 rounded-[10rem] cursor-pointer ${refs.homeVis ? "bg-slate-600/25" : "bg-transparent"}` }>Home</li></Link>
+                  <Link to="/"><li onClick={ handleClick } className={ `hover:bg-slate-600/25 rounded-[10rem] cursor-pointer ${refs.homeVis ? "bg-slate-600/10 dark:bg-slate-600/25" : "bg-transparent"}` }>Home</li></Link>
                   : 
-                  <li className={ `hover:bg-slate-600/25 rounded-[10rem] cursor-pointer ${refs.homeVis ? "bg-slate-600/25" : "bg-transparent"}` }><a href="#home">Home</a></li>
+                  <li className={ `hover:bg-slate-600/25 rounded-[10rem] cursor-pointer ${refs.homeVis ? "bg-slate-600/10 dark:bg-slate-600/25" : "bg-transparent"}` }><a href="#home">Home</a></li>
                 }
                 { !visNavs ?
                   <>
-                    <li className={ `cursor-pointer rounded-[10rem] hover:bg-slate-600/25 ${refs.aboutVis ? "bg-slate-600/25" : "bg-transparent"}` }><a href="#about">About</a></li>
-                    <li className={ `cursor-pointer rounded-[10rem] hover:bg-slate-600/25 ${refs.projectVis ? "bg-slate-600/25" : "bg-transparent"}` }><a href="#projects">Projects</a></li>
+                    <li className={ `cursor-pointer rounded-[10rem] hover:bg-slate-600/25 ${refs.aboutVis ? "bg-slate-600/10 dark:bg-slate-600/25" : "bg-transparent"}` }><a href="#about">About</a></li>
+                    <li className={ `cursor-pointer rounded-[10rem] hover:bg-slate-600/25 ${refs.projectVis ? "bg-slate-600/10 dark:bg-slate-600/25" : "bg-transparent"}` }><a href="#projects">Projects</a></li>
                   </> :
                   ""
                 }
@@ -53,19 +53,19 @@ function Navbar({ visible, visNavs, setVisNavs, refs }) {
             </div>
             { visible ?
               (!lightMode ?
-                <img src={sun} alt="" onClick={ () => setLightMode(true) } className="modes h-8" />
+                <img src={sun} alt="" onClick={ () => setLightMode(true) } className="modes h-7" />
                 :
-                <img src={moon} alt="" onClick={ () => setLightMode(false) } className="modes h-8" />)
+                <img src={moon} alt="" onClick={ () => setLightMode(false) } className="modes h-7" />)
               :
               <></>
             }
           </div>
         </div>
-        <img src={menu} alt="" className="absolute h-10 right-4 invert dark:invert-0 cursor-pointer md:hidden" onClick={ () => setShow(true) } />
+        <img src={menu} alt="" className="absolute h-8 right-4 invert dark:invert-0 cursor-pointer md:hidden" onClick={ () => setShow(true) } />
       </div>
-      <div className={ `fixed top-0 text-black dark:text-white bg-slate-200 dark:bg-slate-950 min-h-screen w-screen z-20 transition duration-500 ${show ? "translate-x-0" : "translate-x-full"}` }>
-        <img src={cross} className="h-14 ml-[88%] invert dark:invert-0 mt-4 cursor-pointer" onClick={ () => setShow(false) } />
-        <ul className="w-full h-1/2 text-3xl ml-20 mt-4 dark:opacity-50 dark:hover:opacity-100">
+      <div className={ `fixed top-0 text-black dark:text-white bg-slate-200 dark:bg-slate-950 min-h-screen w-screen z-20 transition duration-500 ${show ? "translate-x-0 visible" : "invisible translate-x-full"}` }>
+        <img src={cross} className="h-12 absolute right-4 invert dark:invert-0 mt-4 cursor-pointer" onClick={ () => setShow(false) } />
+        <ul className="w-full h-1/2 text-2xl mt-[20%] ml-20 mt-4 dark:opacity-50 dark:hover:opacity-100">
           { visNavs ?
             <li className={ `mb-4 cursor-pointer hover:-ml-2 ` } onClick={ () => setShow(false) }><Link to="/">Home</Link></li>
             :
