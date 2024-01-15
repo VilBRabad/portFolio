@@ -34,7 +34,7 @@ function ProjDetails({ setVisNavs }) {
          desc: "Welcome to my professional portfolio, a dedicated space designed to showcase my skills, experiences, and creative journey. This platform is a reflection of my passion for Web Development and Designing, highlighting not only what I've accomplished but also the potential I bring to future endeavors.",
 
          features: null,
-         challenges: ["Developing cool animations and setting up smooth navigation.", "Fixing Designing Errors"],
+         challenges: ["Developing cool animations and setting up smooth navigation.", "Optimizing & Increasing Performace","Fixing Designing Errors"],
          dig: null,
          link: "https://github.com/VilBRabad/portFolio"
       },
@@ -46,7 +46,6 @@ function ProjDetails({ setVisNavs }) {
          desc: "The project revolves around the vital domain of blood donation and management within a ReactJs and Flask framework. It facilitates the seamless interaction between hospitals, donors and normal users by providing a robust online platform. Hospitals and donors alike can register on the site, creating dedicated accounts to streamline the blood donation process. Donors have the added convenience of scheduling appointments for blood donations, while hospitals can efficiently manage and accept these appointments. The project incorporates an insightful dashboard feature for hospitals, enabling them to monitor the availability of blood units categorized by blood group. As an additional feature, regular users can access information regarding available blood units in their specific areas by entering the relevant area pin code. This project serves as a comprehensive exploration and implementation of advanced MySQL concepts, furthering our understanding of sophisticated database management systems.",
 
          features: ["User registration for hospitals and donors.", "Appointment booking functionality for blood donation.", "Dashboard for hospitals to manage and accept donor appointments.", "Real-time display of available blood units categorized by blood group.", "Area-specific blood unit availability for regular users through pin code entry.", "Pin code-based search functionality for users to view available blood units in specific areas."],
-
          challenges: ["Making appropriate Database and Designing it.", "Handling requests to server.", "Integrating MySQL Queries in server code.", "Implementing advanced MySQL queries i.e PL/SQL"],
          dig: erd2,
          link: "https://github.com/VilBRabad/blood-bank-system"

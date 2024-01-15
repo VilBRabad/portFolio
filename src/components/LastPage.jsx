@@ -17,7 +17,7 @@ function LastPage() {
         <div className="flex flex-col h-[30%] md:h-screen w-full justify-center items-center sm:items-start">
           <span className="text-2xl sm:text-3xl md:text-5xl font-black bg-gradient-to-br from-[#CB79F5] via-[#007CE1] to-[#001AFF] text-transparent bg-clip-text ">VILAS.</span>
           <span className="text-[1.6rem] sm:text-[2.5rem] sm:text-start font-bold md:text-[4rem] text-center">Thank You for Visiting</span>
-          <span className="sm:text-3xl font-bold opacity-40">Get in touch</span>
+          <span className="sm:text-3xl font-bold opacity-70 dark:opacity-40">Get in touch</span>
           <div className="flex md:my-4 max-sm:flex-wrap max-sm:justify-center gap-1 sm:gap-2">
             <div onClick={ handleClick } className="btn m-4 ml-0 z-10 max-sm:m-0 max-sm:mt-4 sm:h-[3rem] w-[9rem] sm:w-[12rem] text-xs sm:text-sm">Lets Work Together</div>
             <a href="#projects" className="w-[6rem] sm:w-[8rem] h-8 sm:h-[3rem] z-10"><div className="w-full h-full bg-slate-700 cursor-pointer mt-4 rounded-full flex justify-center items-center text-xs sm:text-sm font-semibold transition-all duration-300 ease-in-out hover:bg-blue-500 text-white dark:hover:text-black max-sm:m-0 max-sm:mt-4">My Work</div></a>
