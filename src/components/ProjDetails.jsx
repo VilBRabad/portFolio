@@ -29,9 +29,9 @@ function ProjDetails({ setVisNavs }) {
       myPortfolio: {
          image: pr1,
          name: "My PortFolio",
-         date: "20 January 2024",
+         date: "15 January 2024",
          techStack: [react, tailwind, figma],
-         desc: "Welcome to my professional portfolio, a dedicated space designed to showcase my skills, experiences, and creative journey. This platform is a reflection of my passion for Web Development and Designing, highlighting not only what I've accomplished but also the potential I bring to future endeavors.",
+         desc: "My professional portfolio, a dedicated space designed to showcase my skills, experiences, and creative journey. This platform is a reflection of my passion for Web Development and Designing, highlighting not only what I've accomplished but also the potential I bring to future endeavors.",
 
          features: null,
          challenges: ["Developing cool animations and setting up smooth navigation.", "Optimizing & Increasing Performace","Fixing Designing Errors"],

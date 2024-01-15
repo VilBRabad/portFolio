@@ -57,8 +57,8 @@ function Projects({ projectRef }) {
             </div>
           </div>
           <div className="projInfo md:items-start">
-            <div data-aos="fade-left" className="projDate">20 January 2024</div>
-            <div data-aos="fade-left" data-aos-duration="1000" className="shortDetail">Welcome to my professional portfolio, a dedicated space designed to showcase my skills, experiences, and creative journey. This platform is a reflection of my passion for Web Development and Designing, highlighting not only what I've accomplished but also the potential I bring to future endeavors.....</div>
+            <div data-aos="fade-left" className="projDate">15 January 2024</div>
+            <div data-aos="fade-left" data-aos-duration="1000" className="shortDetail">My professional portfolio, a dedicated space designed to showcase my skills, experiences, and creative journey. This platform is a reflection of my passion for Web Development and Designing, highlighting not only what I've accomplished but also the potential I bring to future endeavors.....</div>
           </div>
         </div>
 
@@ -79,7 +79,7 @@ function Projects({ projectRef }) {
             </div>
           </div>
           <div className="projInfo md:items-end">
-            <div data-aos="fade-right" className="projDate">01 December 2024</div>
+            <div data-aos="fade-right" className="projDate">01 December 2023</div>
             <div data-aos="fade-right" data-aos-duration="1000" className="shortDetail ">The project revolves around the vital domain of blood donation and management within a ReactJs and Flask framework. It facilitates the seamless interaction between hospitals, donors and normal users by providing a robust online platform. Hospitals and donors alike can register on the site, creating dedicated accounts to streamline the blood donation process.....</div>
           </div>
         </div>
